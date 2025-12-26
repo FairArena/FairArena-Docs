@@ -73,6 +73,15 @@ export default function Error({
               <Home className="w-4 h-4" />
               Go Home
             </Link>
+            <Link
+              href="https://github.com/fairarena/fairarena-docs/issues/new"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 border-2 border-red-200 dark:border-red-800 rounded-xl hover:bg-red-50 dark:hover:bg-red-950/50 transition-all duration-200 font-medium"
+            >
+              <Bug className="w-4 h-4" />
+              Report Issue
+            </Link>
           </div>
           
           {/* Error details (development only) */}
@@ -111,9 +120,9 @@ export default function Error({
         {/* Help text */}
         <p className="text-center text-sm text-muted-foreground mt-6">
           If this problem persists, please{' '}
-          <Link href="/docs/support" className="text-red-600 dark:text-red-400 hover:underline font-medium">
+          <a href="https://fair.sakshamg.me/support" target="_blank" rel="noopener noreferrer" className="text-red-600 dark:text-red-400 hover:underline font-medium">
             contact support
-          </Link>
+          </a>
         </p>
       </div>
     </div>

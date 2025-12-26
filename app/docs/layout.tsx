@@ -26,13 +26,13 @@ export default function Layout({ children }: { children: ReactNode }) {
         footer: (
           <div className="flex flex-col gap-3 p-4 mt-4 border-t">
             <a
-              href="https://github.com/FairArena/FairArena"
+              href="https://github.com/FairArena/FairArena-Docs"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors group"
             >
               <Github className="w-4 h-4 group-hover:scale-110 transition-transform" />
-              <span>View on GitHub</span>
+              <span>View Docs on GitHub</span>
               <ExternalLink className="w-3 h-3 ml-auto" />
             </a>
             <Link

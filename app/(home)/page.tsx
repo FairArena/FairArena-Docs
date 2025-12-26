@@ -83,23 +83,26 @@ export default function HomePage() {
               <p className="text-muted-foreground text-sm">Understand credits and billing options</p>
             </Link>
 
-            <Link href="/docs/support" className="group p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-200">
+            <a href="https://fair.sakshamg.me/support" target="_blank" rel="noopener noreferrer" className="group p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-pink-500 dark:hover:border-pink-500 hover:shadow-lg transition-all duration-200">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-500 to-pink-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Users className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2 group-hover:text-pink-600 transition-colors">Support</h3>
-              <p className="text-muted-foreground text-sm">Get help and find answers</p>
-            </Link>
+              <h3 className="text-xl font-semibold mb-2 group-hover:text-pink-600 transition-colors flex items-center gap-2">
+                Support
+                <ExternalLink className="w-4 h-4" />
+              </h3>
+              <p className="text-muted-foreground text-sm">Get help and create tickets</p>
+            </a>
 
-            <a href="https://github.com/FairArena/FairArena" target="_blank" rel="noopener noreferrer" className="group p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-gray-500 dark:hover:border-gray-500 hover:shadow-lg transition-all duration-200">
+            <a href="https://github.com/FairArena/FairArena-Docs" target="_blank" rel="noopener noreferrer" className="group p-6 rounded-2xl border-2 border-gray-200 dark:border-gray-800 hover:border-gray-500 dark:hover:border-gray-500 hover:shadow-lg transition-all duration-200">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-gray-700 to-gray-900 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <Github className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold mb-2 group-hover:text-gray-600 transition-colors flex items-center gap-2">
-                GitHub
+                Documentation
                 <ExternalLink className="w-4 h-4" />
               </h3>
-              <p className="text-muted-foreground text-sm">View source code and contribute</p>
+              <p className="text-muted-foreground text-sm">View docs source and contribute</p>
             </a>
           </div>
         </div>

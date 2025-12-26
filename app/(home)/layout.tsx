@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         ),
         transparentMode: 'top',
       }}
-      githubUrl="https://github.com/FairArena/FairArena"
+      githubUrl="https://github.com/FairArena/FairArena-Docs"
       links={[
         {
           text: 'Documentation',

@@ -4,60 +4,87 @@ description: Create and manage your professional profile on FairArena
 icon: User
 ---
 
-## Your Professional Identity
+<div className="flex items-center gap-2 mb-6">
+  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300">✨ Feature</span>
+  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300">🔥 Popular</span>
+  <span className="px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-300">⭐ Essential</span>
+</div>
 
-Your profile is your digital identity on FairArena. It's how others discover you, understand your expertise, and connect with you. A well-crafted profile opens doors to opportunities and collaborations.
+<div className="mb-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/30 dark:to-purple-950/30 rounded-2xl border-2 border-blue-200 dark:border-blue-800">
+  <div className="flex items-start gap-4">
+    <div className="text-5xl">👤</div>
+    <div>
+      <h2 className="text-2xl font-bold mb-2">Your Professional Identity</h2>
+      <p className="text-muted-foreground mb-4">Your profile is your digital identity on FairArena. A well-crafted profile opens doors to opportunities and collaborations.</p>
+      <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="text-center">
+          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">3x</div>
+          <div className="text-xs text-muted-foreground">More Visibility</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">5x</div>
+          <div className="text-xs text-muted-foreground">More Engagement</div>
+        </div>
+        <div className="text-center">
+          <div className="text-2xl font-bold text-green-600 dark:text-green-400">10x</div>
+          <div className="text-xs text-muted-foreground">More Connections</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-## Creating Your Profile
+## Profile Components
 
-### Basic Information
+<div className="grid md:grid-cols-2 gap-6 my-8">
+  <div className="p-5 rounded-xl border-2 border-blue-200 dark:border-blue-800 hover:border-blue-400 dark:hover:border-blue-600 transition-all hover:shadow-lg">
+    <div className="flex items-center gap-3 mb-3">
+      <div className="w-10 h-10 rounded-lg bg-blue-500 text-white flex items-center justify-center text-xl">📸</div>
+      <h3 className="font-bold text-lg">Profile Picture</h3>
+    </div>
+    <ul className="space-y-2 text-sm">
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Professional & clear photo</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>High-quality (400x400px+)</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Face clearly visible</span></li>
+    </ul>
+  </div>
 
-When you first create your profile, you'll want to add these essentials:
+  <div className="p-5 rounded-xl border-2 border-purple-200 dark:border-purple-800 hover:border-purple-400 dark:hover:border-purple-600 transition-all hover:shadow-lg">
+    <div className="flex items-center gap-3 mb-3">
+      <div className="w-10 h-10 rounded-lg bg-purple-500 text-white flex items-center justify-center text-xl">✍️</div>
+      <h3 className="font-bold text-lg">Bio & Summary</h3>
+    </div>
+    <ul className="space-y-2 text-sm">
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Compelling 500-char summary</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Highlight key skills</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Show personality</span></li>
+    </ul>
+  </div>
 
-**Profile Picture**
-- Upload a professional, clear photo
-- Use a high-quality image (recommended: 400x400px or larger)
-- Make sure your face is clearly visible
-- Avoid group photos or heavily filtered images
+  <div className="p-5 rounded-xl border-2 border-green-200 dark:border-green-800 hover:border-green-400 dark:hover:border-green-600 transition-all hover:shadow-lg">
+    <div className="flex items-center gap-3 mb-3">
+      <div className="w-10 h-10 rounded-lg bg-green-500 text-white flex items-center justify-center text-xl">🎯</div>
+      <h3 className="font-bold text-lg">Skills & Expertise</h3>
+    </div>
+    <ul className="space-y-2 text-sm">
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>List technical skills</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Add professional abilities</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Be specific & detailed</span></li>
+    </ul>
+  </div>
 
-**Name**
-- Add your first name and last name
-- This helps others find and recognize you
-- You can update this anytime from settings
-
-**Bio**
-- Write a compelling summary of who you are (up to 500 characters)
-- Highlight your key skills and what you're passionate about
-- Make it personal but professional
-- Example: "Full-stack developer passionate about building scalable applications. Love working with React and Node.js. Always learning!"
-
-### Professional Details
-
-Make your profile complete by adding these details:
-
-**Skills**
-- List all your technical and professional skills
-- Be specific (e.g., "React 19", "TypeScript", "Project Management")
-- Add as many relevant skills as you have
-- Skills help others find you when searching for expertise
-
-**Interests**
-- Share what topics you're interested in
-- This helps connect you with like-minded professionals
-- Can include both professional and personal interests
-
-**Experience**
-- Add your work history
-- Include company names, roles, and what you accomplished
-- List projects you've worked on
-- Highlight your achievements
-
-**Education**
-- Add your educational background
-- Include degrees, certifications, and courses
-- Mention relevant training programs
-
-**Languages**
+  <div className="p-5 rounded-xl border-2 border-orange-200 dark:border-orange-800 hover:border-orange-400 dark:hover:border-orange-600 transition-all hover:shadow-lg">
+    <div className="flex items-center gap-3 mb-3">
+      <div className="w-10 h-10 rounded-lg bg-orange-500 text-white flex items-center justify-center text-xl">💼</div>
+      <h3 className="font-bold text-lg">Work Experience</h3>
+    </div>
+    <ul className="space-y-2 text-sm">
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Add work history</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>Highlight achievements</span></li>
+      <li className="flex items-start gap-2"><span className="text-green-500 mt-0.5">✓</span><span>List key projects</span></li>
+    </ul>
+  </div>
+</div>
 - List languages you speak
 - This helps in international collaboration
 

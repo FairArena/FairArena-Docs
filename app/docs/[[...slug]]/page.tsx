@@ -13,7 +13,7 @@ import { LLMCopyButton, ViewOptions } from "@/components/page-actions";
 import { InlineTOC } from "fumadocs-ui/components/inline-toc";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import Link from "next/link";
-import { ChevronRight, Clock, Edit, Github } from "lucide-react";
+import { ChevronRight, Edit, Github } from "lucide-react";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -23,7 +23,7 @@ export default async function Page(props: {
   if (!page) notFound();
 
   const MDX = page.data.body;
-  const path = page.file?.path || "";
+  const path = params.slug?.join('/') || 'index';
 
   const breadcrumb = page.slugs.map((slug, i) => ({
     name: slug
@@ -37,26 +37,16 @@ export default async function Page(props: {
     <DocsPage
       toc={page.data.toc}
       full={page.data.full}
-      lastUpdate={page.data.lastModified}
-      editOnGithub={{
-        owner: "FairArena",
-        repo: "FairArena",
-        sha: "main",
-        path,
-      }}
       tableOfContent={{
         enabled: true,
         header: (
           <div className="space-y-3">
             <div className="pb-3 border-b">
-              <p className="text-xs font-medium text-muted-foreground mb-2">
-                🤖 Open in AI
-              </p>
               <div className="flex flex-col gap-2">
                 <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
                 <ViewOptions
                   markdownUrl={`${page.url}.mdx`}
-                  githubUrl={`https://github.com/FairArena/FairArena/blob/main/docs/content/docs/${path}`}
+                  githubUrl={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
                 />
               </div>
             </div>
@@ -65,7 +55,7 @@ export default async function Page(props: {
         footer: (
           <div className="pt-4 mt-4 border-t space-y-4">
             <a
-              href={`https://github.com/FairArena/FairArena/blob/main/docs/content/docs/${path}`}
+              href={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors group"
@@ -78,7 +68,6 @@ export default async function Page(props: {
       }}
       breadcrumb={{
         enabled: true,
-        items: [{ name: "Home", url: "/docs" }, ...breadcrumb],
       }}
     >
       {/* Breadcrumb Navigation */}
@@ -108,21 +97,8 @@ export default async function Page(props: {
 
       {/* Page metadata */}
       <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b">
-        {page.data.lastModified && (
-          <div className="flex items-center gap-1.5">
-            <Clock className="w-4 h-4" />
-            <span>
-              Updated{" "}
-              {new Date(page.data.lastModified).toLocaleDateString("en-US", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
-            </span>
-          </div>
-        )}
         <a
-          href={`https://github.com/FairArena/FairArena/blob/main/docs/content/docs/${path}`}
+          href={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 hover:text-foreground transition-colors"
@@ -159,11 +135,36 @@ export async function generateMetadata(props: {
   const page = source.getPage(params.slug);
   if (!page) notFound();
 
+  const image = getPageImage(page);
+  const url = `https://fair.sakshamg.me${page.url}`;
+
   return {
     title: page.data.title,
     description: page.data.description,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
-      images: getPageImage(page).url,
+      title: page.data.title,
+      description: page.data.description,
+      type: 'article',
+      url,
+      siteName: 'FairArena Documentation',
+      images: [
+        {
+          url: image.url,
+          width: 1200,
+          height: 630,
+          alt: page.data.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: page.data.title,
+      description: page.data.description,
+      images: [image.url],
+      creator: '@FairArena',
     },
   };
 }

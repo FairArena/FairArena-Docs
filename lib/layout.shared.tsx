@@ -13,6 +13,6 @@ export function baseOptions(): BaseLayoutProps {
         active: 'nested-url',
       },
     ],
-    githubUrl: 'https://github.com/FairArena/FairArena',
+    githubUrl: 'https://github.com/FairArena/FairArena-Docs',
   };
 }

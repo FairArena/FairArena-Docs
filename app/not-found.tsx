@@ -56,13 +56,13 @@ export default function NotFound() {
               Getting Started
             </Link>
             <span className="text-gray-300 dark:text-gray-700">•</span>
-            <Link href="/docs/account-settings" className="text-blue-600 dark:text-blue-400 hover:underline">
+            <Link href="/docs/account/account-settings" className="text-blue-600 dark:text-blue-400 hover:underline">
               Account Settings
             </Link>
             <span className="text-gray-300 dark:text-gray-700">•</span>
-            <Link href="/docs/support" className="text-blue-600 dark:text-blue-400 hover:underline">
+            <a href="https://fair.sakshamg.me/support" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">
               Support
-            </Link>
+            </a>
           </div>
         </div>
       </div>
