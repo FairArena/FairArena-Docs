@@ -1,0 +1,10 @@
+{
+  "title": "Features",
+  "icon": "Sparkles",
+  "pages": [
+    "user-profiles",
+    "organizations",
+    "teams-and-projects",
+    "notifications"
+  ]
+}

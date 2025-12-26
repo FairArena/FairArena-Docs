@@ -1,0 +1,9 @@
+{
+  "title": "Account & Settings",
+  "icon": "Settings",
+  "pages": [
+    "account-settings",
+    "security-and-privacy",
+    "privacy-controls"
+  ]
+}

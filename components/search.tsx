@@ -14,19 +14,16 @@ import {
 } from 'fumadocs-ui/components/dialog/search';
 import { useDocsSearch } from 'fumadocs-core/search/client';
 import { OramaCloud } from '@orama/core';
-import { useI18n } from 'fumadocs-ui/contexts/i18n';
 
 const client = new OramaCloud({
-  projectId: process.env.NEXT_PUBLIC_ORAMA_PROJECT_ID,
-  apiKey: process.env.NEXT_PUBLIC_ORAMA_API_KEY,
+  projectId: process.env.NEXT_PUBLIC_ORAMA_PROJECT_ID!,
+  apiKey: process.env.NEXT_PUBLIC_ORAMA_API_KEY!,
 });
 
 export default function CustomSearchDialog(props: SharedProps) {
-  const { locale } = useI18n(); // (optional) for i18n
   const { search, setSearch, query } = useDocsSearch({
     type: 'orama-cloud',
     client,
-    locale,
   });
 
   return (

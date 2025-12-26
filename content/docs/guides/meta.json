@@ -1,0 +1,10 @@
+{
+  "title": "Guides",
+  "icon": "BookOpen",
+  "pages": [
+    "quick-start",
+    "profile-setup",
+    "joining-organizations",
+    "team-collaboration"
+  ]
+}
