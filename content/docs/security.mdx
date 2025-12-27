@@ -1,0 +1,653 @@
+---
+title: Security & Privacy
+description: How FairArena protects your data and ensures your privacy
+icon: ShieldCheck
+---
+
+## Our Security Commitment
+
+At FairArena, security isn't an afterthought—it's built into every layer of our platform. We use enterprise-grade security measures to protect your data and give you complete control over your privacy.
+
+<div className="grid md:grid-cols-2 gap-4 my-6">
+  <div className="p-5 rounded-lg bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-900/30 border border-green-200 dark:border-green-800">
+    <div className="text-3xl mb-2">🔒</div>
+    <h3 className="font-bold mb-2">Enterprise Security</h3>
+    <p className="text-sm text-muted-foreground">Military-grade encryption, DDoS protection, and 24/7 monitoring keep your data safe</p>
+  </div>
+  <div className="p-5 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-950/30 dark:to-cyan-900/30 border border-blue-200 dark:border-blue-800">
+    <div className="text-3xl mb-2">👁️</div>
+    <h3 className="font-bold mb-2">You Control Privacy</h3>
+    <p className="text-sm text-muted-foreground">Granular privacy controls let you decide exactly who sees your information</p>
+  </div>
+</div>
+
+## Security Features
+
+### Multi-Layer Protection
+
+| Layer | Technology | Protection |
+|-------|------------|------------|
+| **🔐 Authentication** | Clerk (Industry leader) | Secure login, 2FA, session management |
+| **🛡️ DDoS Protection** | Arcjet | Advanced attack prevention |
+| **🤖 Bot Detection** | Arcjet | Automated threat blocking |
+| **🔒 Encryption** | TLS/SSL, AES-256 | Data in transit & at rest |
+| **⚡ Rate Limiting** | Smart throttling | Prevents abuse & attacks |
+| **👁️ Monitoring** | 24/7 surveillance | Real-time threat detection |
+| **📊 Audit Logs** | Complete tracking | Accountability & compliance |
+
+### Data Encryption
+
+**In Transit:**
+<Tabs items={['HTTPS', 'API Security', 'WebSocket']}>
+  <Tab value="HTTPS">
+    **All connections encrypted**
+    
+    - ✅ TLS 1.3 (latest standard)
+    - ✅ Perfect forward secrecy
+    - ✅ Strong cipher suites
+    - ✅ Certificate pinning
+    - ✅ Automatic HTTPS redirect
+    
+    **Result:** No one can intercept your data
+  </Tab>
+  <Tab value="API Security">
+    **Secure API communications**
+    
+    - ✅ Token-based authentication
+    - ✅ Request signing
+    - ✅ Rate limiting
+    - ✅ Input validation
+    - ✅ Output sanitization
+    
+    **Result:** APIs protected from abuse
+  </Tab>
+  <Tab value="WebSocket">
+    **Real-time security**
+    
+    - ✅ WSS (WebSocket Secure)
+    - ✅ Authentication required
+    - ✅ Message encryption
+    - ✅ Connection validation
+    
+    **Result:** Secure real-time features
+  </Tab>
+</Tabs>
+
+**At Rest:**
+- 🔐 Database encryption (AES-256)
+- 🔐 File storage encryption
+- 🔐 Backup encryption
+- 🔐 Key management (secure vault)
+
+## Account Security
+
+### Authentication
+
+**Powered by Clerk:**
+
+<Tabs items={['Login Security', 'Password Protection', 'Session Management']}>
+  <Tab value="Login Security">
+    **Multiple authentication methods:**
+    
+    **Email & Password:**
+    - Strong password requirements
+    - Password strength meter
+    - Breach detection
+    - Secure password hashing (bcrypt)
+    
+    **Social Login:**
+    - Google OAuth
+    - GitHub OAuth
+    - Secure token exchange
+    
+    **Magic Links:**
+    - Passwordless login option
+    - Time-limited tokens
+    - One-time use
+  </Tab>
+  <Tab value="Password Protection">
+    **Password requirements:**
+    
+    - Minimum 8 characters
+    - Mix recommended:
+      - Uppercase letters
+      - Lowercase letters
+      - Numbers
+      - Special characters
+    
+    **Protection features:**
+    - ✅ Breach database checking
+    - ✅ Password history (no reuse)
+    - ✅ Secure storage (hashed + salted)
+    - ✅ Never sent in plain text
+    - ✅ Can't be recovered (only reset)
+  </Tab>
+  <Tab value="Session Management">
+    **Secure sessions:**
+    
+    - ✅ Encrypted session tokens
+    - ✅ Automatic expiration
+    - ✅ Concurrent session limits
+    - ✅ Device tracking
+    - ✅ Remote logout capability
+    
+    **Session duration:**
+    - Active: 7 days (default)
+    - Inactive: 30 minutes timeout
+    - Remember me: 30 days
+    - All configurable in settings
+  </Tab>
+</Tabs>
+
+### Two-Factor Authentication (2FA)
+
+Add an extra security layer:
+
+<Steps>
+
+### Enable 2FA
+
+1. Go to **Account Settings**
+2. Navigate to **Security**
+3. Click **Enable Two-Factor Authentication**
+
+### Choose Method
+
+**Available options:**
+
+| Method | Security Level | Convenience |
+|--------|----------------|-------------|
+| **Authenticator App** | 🔒🔒🔒 High | ⭐⭐⭐ Good |
+| **SMS** | 🔒🔒 Medium | ⭐⭐⭐⭐ Easy |
+| **Email** | 🔒 Basic | ⭐⭐⭐⭐⭐ Easiest |
+
+**Recommended:** Authenticator app (Google Authenticator, Authy)
+
+### Set Up
+
+**For Authenticator App:**
+1. Scan QR code with app
+2. Enter 6-digit code
+3. Verify it works
+4. Save backup codes
+
+**For SMS:**
+1. Enter phone number
+2. Verify with code
+3. Enable 2FA
+
+**For Email:**
+1. Confirm email address
+2. Test with code
+3. Activate
+
+### Save Backup Codes
+
+⚠️ **Critical:** Save backup codes securely
+
+- Use if you lose 2FA device
+- Each code works once
+- Store in password manager or safe place
+- Print and keep in secure location
+
+### Test 2FA
+
+1. Log out
+2. Log back in
+3. Enter 2FA code
+4. Confirm it works
+
+</Steps>
+
+<Callout type="warning" title="Important!">
+  Keep backup codes safe! If you lose your 2FA device without backup codes, you'll need to contact support to recover your account.
+</Callout>
+
+### Password Management
+
+**Reset Password:**
+
+<Steps>
+
+### Initiate Reset
+
+Click "Forgot Password" on login page
+
+### Verify Identity
+
+Enter your email address
+
+### Check Email
+
+- Reset link sent instantly
+- Valid for 1 hour
+- Single use only
+
+### Create New Password
+
+- Enter new password
+- Confirm password
+- Must be different from old
+- Save changes
+
+### Confirmation
+
+- Password updated successfully
+- All sessions logged out
+- Log in with new password
+
+</Steps>
+
+**Password Best Practices:**
+
+<Accordions>
+  <Accordion title="Strong Passwords">
+    **Do:**
+    - ✅ Use 12+ characters
+    - ✅ Mix character types
+    - ✅ Use unique passwords per site
+    - ✅ Use password manager
+    - ✅ Change if compromised
+    
+    **Don't:**
+    - ❌ Use personal info
+    - ❌ Reuse passwords
+    - ❌ Use common words
+    - ❌ Share passwords
+    - ❌ Write them down unsecurely
+  </Accordion>
+  
+  <Accordion title="Password Managers">
+    **Recommended tools:**
+    - 1Password
+    - LastPass
+    - Bitwarden
+    - Dashlane
+    
+    **Benefits:**
+    - Generate strong passwords
+    - Auto-fill login forms
+    - Secure encrypted storage
+    - Cross-device sync
+  </Accordion>
+</Accordions>
+
+## Privacy Controls
+
+### Profile Privacy
+
+Control who sees your information:
+
+<Tabs items={['Public', 'Private', 'Require Auth']}>
+  <Tab value="Public">
+    **Maximum visibility**
+    
+    **Who can see:**
+    - ✅ Anyone on the internet
+    - ✅ Search engines
+    - ✅ Non-logged in users
+    
+    **Best for:**
+    - Job seekers
+    - Freelancers
+    - Public figures
+    - Open networking
+    
+    **Set:** Profile → Privacy → Public
+  </Tab>
+  <Tab value="Private">
+    **Platform-only visibility**
+    
+    **Who can see:**
+    - ✅ Logged-in FairArena users only
+    - ❌ Search engines
+    - ❌ Non-members
+    
+    **Best for:**
+    - Most users
+    - Balanced privacy
+    - Internal networking
+    
+    **Set:** Profile → Privacy → Private
+  </Tab>
+  <Tab value="Require Auth">
+    **Maximum privacy + tracking**
+    
+    **Who can see:**
+    - ✅ Only logged-in users
+    - ✅ You can track who views
+    - ❌ Anonymous viewing disabled
+    
+    **Best for:**
+    - High privacy needs
+    - Track your audience
+    - Controlled access
+    
+    **Set:** Profile → Privacy → Require Authentication
+  </Tab>
+</Tabs>
+
+### Data You Control
+
+**What you can make private:**
+
+| Data Type | Privacy Control | Location |
+|-----------|----------------|----------|
+| **Profile** | Public/Private/Auth | Profile Settings |
+| **Email** | Show/Hide | Account Settings |
+| **Phone** | Show/Hide | Profile Settings |
+| **Resume** | Show/Hide | Profile Settings |
+| **Work History** | Show/Hide | Profile Settings |
+| **Education** | Show/Hide | Profile Settings |
+| **Projects** | Public/Internal/Private | Project Settings |
+| **Teams** | Public/Internal/Private | Team Settings |
+| **Organizations** | Public/Private | Organization Settings |
+
+### View Tracking
+
+**Control who can see you:**
+
+**Enable View Tracking:**
+1. Profile Settings → Privacy
+2. Toggle "Track Profile Views"
+3. Enable "Require Authentication"
+4. Save changes
+
+**What you'll see:**
+- Viewer's name
+- Viewer's email
+- View timestamp
+- Total view count
+- Recent viewers list
+
+**Disable Tracking:**
+- Toggle off anytime
+- Previous data retained
+- No new tracking
+
+## Data Privacy
+
+### What We Collect
+
+**Account Information:**
+- Email address
+- Name (first, last)
+- Password (hashed, never stored plain)
+- Profile information you provide
+
+**Usage Information:**
+- Features you use
+- Pages you visit
+- Actions you take
+- Performance data
+- Error logs (for debugging)
+
+**Technical Information:**
+- IP address
+- Browser type and version
+- Device information
+- Operating system
+- Login timestamps
+
+### How We Use Data
+
+**Primary uses:**
+1. **Provide Service:** Enable platform features
+2. **Authentication:** Verify your identity
+3. **Communication:** Send important notifications
+4. **Improvement:** Make platform better
+5. **Security:** Protect against threats
+6. **Support:** Help you when needed
+7. **Legal:** Comply with obligations
+
+**We DON'T:**
+- ❌ Sell your data
+- ❌ Share without permission
+- ❌ Use for unrelated purposes
+- ❌ Track across other websites
+- ❌ Sell to advertisers
+
+### Data Rights
+
+**Your rights:**
+
+| Right | Description | How to Exercise |
+|-------|-------------|-----------------|
+| **Access** | See what data we have | Account → Privacy → Export Data |
+| **Correction** | Fix incorrect data | Edit in Settings |
+| **Deletion** | Delete your data | Account → Delete Account |
+| **Portability** | Get your data | Account → Export |
+| **Object** | Stop certain processing | Contact support |
+| **Restrict** | Limit how we use data | Privacy Settings |
+
+### Data Retention
+
+**How long we keep data:**
+
+| Data Type | Retention Period | Reason |
+|-----------|------------------|--------|
+| **Active Account** | While account exists | Service provision |
+| **Deleted Account** | 30 days | Allow recovery |
+| **Backup Data** | 90 days | Disaster recovery |
+| **Audit Logs** | 1 year | Security & compliance |
+| **Transaction Records** | 7 years | Legal requirement |
+
+## Platform Security
+
+### Infrastructure
+
+**Built on secure foundations:**
+
+- 🏗️ **Modern Stack:** React 19, Express 5, PostgreSQL
+- ☁️ **Cloud Infrastructure:** Reliable hosting
+- 🔄 **Regular Updates:** Security patches applied quickly
+- 📦 **Dependency Management:** Monitored for vulnerabilities
+- 🔒 **Database Security:** Connection pooling, prepared statements
+- 🛡️ **SQL Injection Prevention:** Prisma ORM protection
+
+### DDoS & Attack Protection
+
+**Arcjet Protection:**
+
+<Tabs items={['DDoS Protection', 'Bot Detection', 'Rate Limiting']}>
+  <Tab value="DDoS Protection">
+    **Advanced attack prevention:**
+    
+    - ✅ Traffic analysis
+    - ✅ Automatic mitigation
+    - ✅ Load balancing
+    - ✅ IP filtering
+    - ✅ Challenge responses
+    
+    **Result:** Platform stays online during attacks
+  </Tab>
+  <Tab value="Bot Detection">
+    **Stop malicious bots:**
+    
+    - ✅ Behavioral analysis
+    - ✅ Machine learning detection
+    - ✅ CAPTCHA challenges
+    - ✅ Fingerprint analysis
+    - ✅ Real-time blocking
+    
+    **Result:** Only real users access platform
+  </Tab>
+  <Tab value="Rate Limiting">
+    **Prevent abuse:**
+    
+    - ✅ Request throttling
+    - ✅ Per-IP limits
+    - ✅ Per-user limits
+    - ✅ Smart adjustments
+    - ✅ Fair usage policies
+    
+    **Result:** Resources available for everyone
+  </Tab>
+</Tabs>
+
+### Monitoring & Response
+
+**24/7 security monitoring:**
+
+- 🔍 Real-time threat detection
+- 🚨 Automated alerting
+- 👨‍💻 Security team response
+- 📊 Performance monitoring
+- 📝 Incident logging
+- 🔄 Continuous improvement
+
+## Compliance & Standards
+
+### Security Standards
+
+**We follow:**
+
+| Standard | Description | Status |
+|----------|-------------|--------|
+| **HTTPS Everywhere** | All connections encrypted | ✅ Compliant |
+| **OWASP Top 10** | Web security best practices | ✅ Followed |
+| **GDPR** | EU data protection | ✅ Compliant |
+| **CCPA** | California privacy law | ✅ Compliant |
+| **SOC 2** | Security controls | 🔄 In progress |
+
+### Regular Audits
+
+**Security practices:**
+- 🔍 Weekly vulnerability scans
+- 🔐 Quarterly security audits
+- 📋 Annual penetration testing
+- 🔄 Continuous monitoring
+- 📝 Incident response plans
+
+## Reporting Security Issues
+
+### Responsible Disclosure
+
+Found a security issue? We appreciate responsible disclosure:
+
+<Steps>
+
+### Identify Issue
+
+Document the security concern:
+- What's the vulnerability?
+- How did you find it?
+- What's the impact?
+- Steps to reproduce
+
+### Report Privately
+
+**Email:** security@fairarena.com
+
+**Include:**
+- Detailed description
+- Reproduction steps
+- Screenshots/videos if applicable
+- Your contact information
+
+### Wait for Response
+
+- We respond within 24-48 hours
+- Keep issue confidential
+- Don't exploit vulnerability
+- Don't share publicly yet
+
+### Coordinate Disclosure
+
+- We'll work on a fix
+- You'll be credited (if desired)
+- Public disclosure coordinated
+- Responsible disclosure appreciated
+
+</Steps>
+
+**Rewards:**
+- Recognition in security hall of fame
+- Potential bug bounty (case by case)
+- Our sincere thanks!
+
+<Callout type="warning">
+  **Please don't:** Exploit vulnerabilities, access others' data, disrupt service, or disclose publicly before we can fix. We appreciate responsible disclosure!
+</Callout>
+
+## Best Practices for Users
+
+### Protect Your Account
+
+**Essential security habits:**
+
+1. **✅ Use strong, unique password**
+2. **✅ Enable 2FA**
+3. **✅ Keep software updated**
+4. **✅ Use secure networks**
+5. **✅ Log out on shared devices**
+6. **✅ Monitor account activity**
+7. **✅ Review privacy settings**
+8. **✅ Be cautious with emails**
+
+### Recognize Phishing
+
+**Warning signs:**
+
+| Red Flag | Example |
+|----------|---------|
+| **Suspicious sender** | "fairarenas-support@gmail.com" |
+| **Urgent requests** | "Account will be deleted in 24h!" |
+| **Generic greetings** | "Dear user" instead of your name |
+| **Suspicious links** | URL doesn't match fairarena.com |
+| **Request for password** | We NEVER ask for your password |
+| **Poor grammar** | Obvious spelling/grammar errors |
+
+**If suspicious:**
+1. Don't click links
+2. Don't provide information
+3. Forward to security@fairarena.com
+4. Delete the email
+
+## FAQs
+
+<Accordions>
+  <Accordion title="Is my data encrypted?">
+    **Yes, absolutely!** All data is encrypted in transit (HTTPS/TLS) and at rest (AES-256). We use industry-standard encryption to protect your information.
+  </Accordion>
+  
+  <Accordion title="Can FairArena staff see my data?">
+    Staff access is strictly limited and logged. Only necessary personnel can access data, and only for legitimate support/security reasons. All access is audited.
+  </Accordion>
+  
+  <Accordion title="What if my account is compromised?">
+    **Immediately:**
+    1. Change your password
+    2. Enable 2FA
+    3. Review recent activity
+    4. Contact support@fairarena.com
+    5. Check for unauthorized changes
+  </Accordion>
+  
+  <Accordion title="How do I delete my account?">
+    Go to Account Settings → Danger Zone → Delete Account. Your data is removed within 30 days (except what we're legally required to keep for transactions).
+  </Accordion>
+  
+  <Accordion title="Do you sell my data?">
+    **Never.** We don't sell, rent, or trade your personal information to third parties. Your data is yours.
+  </Accordion>
+  
+  <Accordion title="What happens if there's a breach?">
+    We have an incident response plan. If there's a breach, we'll:
+    1. Contain the incident
+    2. Investigate thoroughly
+    3. Notify affected users promptly
+    4. Take corrective action
+    5. Report to authorities if required
+  </Accordion>
+</Accordions>
+
+## Next Steps
+
+- [Configure Account Settings →](/docs/account-settings)
+- [Manage Roles & Permissions →](/docs/roles-permissions)
+- [Contact Support →](/docs/support)
+
+---
+
+**Security concerns?** Email security@fairarena.com immediately.

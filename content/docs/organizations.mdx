@@ -1,116 +1,263 @@
 ---
 title: Organizations
-description: Connect with professional organizations and communities on FairArena
+description: Join and manage professional organizations on FairArena
 icon: Building2
 ---
 
 ## What are Organizations?
 
-Organizations are communities where professionals and companies gather on FairArena. Think of them as your digital workplace or professional hub where teams, projects, and collaboration happen. Whether you're part of a company, open-source community, or professional group, organizations provide the structure for collaborative work.
+Organizations are the foundation of collaboration on FairArena. They represent companies, open-source communities, professional groups, or any collective where teams work together on projects.
 
-## Why Join an Organization?
+<div className="grid md:grid-cols-3 gap-4 my-6">
+  <div className="p-4 rounded-lg border bg-card">
+    <div className="text-2xl mb-2">🏢</div>
+    <h3 className="font-bold text-sm">For Companies</h3>
+    <p className="text-xs text-muted-foreground">Manage your entire workforce and projects</p>
+  </div>
+  <div className="p-4 rounded-lg border bg-card">
+    <div className="text-2xl mb-2">🌐</div>
+    <h3 className="font-bold text-sm">For Communities</h3>
+    <p className="text-xs text-muted-foreground">Build open-source and interest groups</p>
+  </div>
+  <div className="p-4 rounded-lg border bg-card">
+    <div className="text-2xl mb-2">🎓</div>
+    <h3 className="font-bold text-sm">For Institutions</h3>
+    <p className="text-xs text-muted-foreground">Educational and research collaboration</p>
+  </div>
+</div>
 
-Organizations offer many benefits:
+## Organization Structure
 
-- 🏢 **Professional Community** - Connect with colleagues and like-minded professionals
-- 🤝 **Team Collaboration** - Access teams and projects within the organization
-- 🎯 **Structured Work** - Benefit from organized roles and permissions
-- 📢 **Stay Informed** - Get updates and announcements from the organization
-- ⭐ **Build Reputation** - Your contributions become visible to the entire organization
-- 🔗 **Networking** - Expand your professional network
+Understanding how organizations work:
+
+| Component | Description | Purpose |
+|-----------|-------------|---------|
+| **Organization** | Top-level entity | Main container for all collaboration |
+| **Teams** | Work groups within org | Focused collaboration spaces |
+| **Projects** | Work items within teams | Specific deliverables and tasks |
+| **Roles** | Permission sets | Control access and capabilities |
+| **Members** | People in the org | Users with assigned roles |
 
 ## Finding Organizations
 
-### Browse Organizations
-
-You can discover organizations in several ways:
-
-**Explore Page**
-- Visit the Organizations section from your dashboard
-- Browse all available organizations
-- Filter by public organizations
-- See organization descriptions and member counts
-
-**Search**
-- Use the search feature to find specific organizations
-- Search by organization name
-- Find organizations by industry or interest
-
-**Public vs Private**
-- **Public Organizations**: Visible to everyone and easier to join
-- **Private Organizations**: More exclusive, require invitation or approval
-
-## Joining an Organization
-
-There are several ways to become part of an organization:
-
-### Open Join Organizations
-
-Some organizations allow anyone to join:
-
-1. Find the organization you want to join
-2. Click on the organization to view its profile
-3. Look for the **Join** button
-4. Click **Join** and you're in! 🎉
-
-<Callout type="info">
-  Organizations with "Join Enabled" allow instant access without approval.
-</Callout>
-
-### Invitation-Based Organizations
-
-Most organizations work on an invite system:
-
-**Receiving an Invite**
-1. An organization member sends you an invite code
-2. You'll receive the invite via email
-3. Click the link in the email to accept
-4. Choose your role (if multiple options are available)
-5. Welcome to the organization!
-
-**Invite Codes**
-- Each invite code is unique and secure
-- Codes can have expiration dates
-- Codes may be role-specific
-- Codes are single-use (can't be shared)
-
-### Request Access
-
-For closed organizations:
-
-1. Visit the organization's profile
-2. Click **Request Access** (if available)
-3. Wait for an organization admin to review your request
-4. You'll receive a notification when approved
-
-## Creating an Organization
-
-If you want to start your own organization:
+### Browse Available Organizations
 
 <Steps>
 
-### Plan Your Organization
-Decide on the purpose, structure, and goals of your organization.
+### Access Organizations Page
 
-### Create Organization
-Navigate to the Organizations section and click **Create Organization**.
+Navigate to **Organizations** from your dashboard
 
-### Set Basic Details
-- **Organization Name**: Choose a clear, memorable name
-- **Slug**: This becomes part of your organization's URL
-- **Description**: Explain what your organization does
-- **Logo**: Upload a recognizable logo (optional)
+### Filter Organizations
+
+Use filters to find what you need:
+
+| Filter | Description | Use Case |
+|--------|-------------|----------|
+| **Visibility** | Public/Private | Find open organizations |
+| **Industry** | Organization type | Match your interests |
+| **Size** | Member count | Small teams vs large corps |
+| **Activity** | Recent activity | Active communities |
+
+### View Organization Details
+
+Click any organization to see:
+- Organization profile and description
+- Number of teams and members
+- Recent activity
+- Public projects
+- Join options
+
+### Search Organizations
+
+Use the search bar to find specific organizations by name or keywords
+
+</Steps>
+
+### Organization Visibility
+
+<Tabs items={['Public Organizations', 'Private Organizations']}>
+  <Tab value="Public Organizations">
+    **Characteristics:**
+    - ✅ Visible to everyone (even non-members)
+    - ✅ Appear in search results
+    - ✅ Anyone can request to join
+    - ✅ Great for open-source communities
+    - ✅ Maximum discoverability
+    
+    **Best for:**
+    - Open-source projects
+    - Public communities
+    - Educational institutions
+    - Networking groups
+  </Tab>
+  <Tab value="Private Organizations">
+    **Characteristics:**
+    - 🔒 Only visible to members
+    - 🔒 Invitation-only
+    - 🔒 Don't appear in public search
+    - 🔒 Better security and privacy
+    - 🔒 Controlled access
+    
+    **Best for:**
+    - Private companies
+    - Confidential projects
+    - Internal teams
+    - Client work
+  </Tab>
+</Tabs>
+
+## Joining Organizations
+
+### Three Ways to Join
+
+<Accordions>
+  <Accordion title="1. Open Join (Instant Access)">
+    Some organizations allow anyone to join instantly:
+    
+    1. Find the organization
+    2. Click **Join Organization**
+    3. You're in! 🎉
+    
+    **Requirements:**
+    - Organization must have "Join Enabled"
+    - You must have a verified account
+    - Default role is usually "Member"
+  </Accordion>
+  
+  <Accordion title="2. Invitation Code (Secure Access)">
+    Most organizations use invite codes:
+    
+    1. Receive invite code via email
+    2. Click the invitation link
+    3. Review organization details
+    4. Accept the invitation
+    5. Choose role (if options available)
+    6. Confirm and join
+    
+    **About Invite Codes:**
+    - Unique and secure
+    - Can be role-specific
+    - May have expiration dates
+    - Single-use only
+    - Sent by organization admins
+  </Accordion>
+  
+  <Accordion title="3. Request Access (Approval Required)">
+    For closed organizations:
+    
+    1. Visit organization profile
+    2. Click **Request Access**
+    3. Write a brief message (optional)
+    4. Submit request
+    5. Wait for admin approval
+    6. Receive notification when approved
+    
+    **Tips for requests:**
+    - Explain why you want to join
+    - Mention relevant experience
+    - Be professional and concise
+    - Follow up if no response in a week
+  </Accordion>
+</Accordions>
+
+## Creating an Organization
+
+### Planning Your Organization
+
+Before creating, consider:
+
+| Decision | Options | Impact |
+|----------|---------|--------|
+| **Purpose** | Company, Community, Project | Shapes structure |
+| **Visibility** | Public or Private | Who can see it |
+| **Size** | Small team or Enterprise | Resource needs |
+| **Structure** | Teams and roles | How people work |
+
+### Creation Steps
+
+<Steps>
+
+### Navigate to Creation
+
+Go to **Organizations** → **Create Organization**
+
+### Set Basic Information
+
+**Organization Name**
+- Clear and memorable
+- Represents your organization well
+- Example: "Acme Corp", "React Developers"
+
+**Slug**
+- URL-friendly identifier
+- Auto-generated from name
+- Can be customized
+- Example: "acme-corp", "react-devs"
+
+### Write Description
+
+Create a compelling description:
+- What your organization does
+- Who should join
+- What to expect
+- Main goals and values
+
+**Example:**
+```
+Acme Corp is a leading software development company specializing in 
+cloud solutions. We build scalable applications using modern technologies 
+and welcome developers passionate about innovation.
+```
+
+### Upload Branding
+
+**Logo**
+- Recommended size: 200x200px
+- Formats: PNG, JPG, SVG
+- Appears on profile and in listings
+
+**Banner**
+- Recommended size: 1200x400px
+- Creates visual impact
+- Appears on organization page
 
 ### Configure Settings
-- Set visibility (Public or Private)
-- Enable or disable open joining
-- Set your timezone
 
-### Create Roles
-Define roles and permissions for different members (admins, members, viewers, etc.)
+**Visibility Settings:**
+- ☑️ Public (visible to all)
+- ☐ Private (members only)
 
-### Invite Members
-Start building your organization by inviting team members
+**Join Settings:**
+- ☑️ Enable open join
+- ☐ Invitation only
+
+**Other Settings:**
+- Set timezone
+- Add location
+- Add website URL
+
+### Create Initial Roles
+
+Set up role structure (you can modify later):
+
+| Role | Permissions | Suggested For |
+|------|-------------|---------------|
+| **Owner** | Full control | Founders |
+| **Admin** | Manage most things | Leadership team |
+| **Member** | Basic access | Regular employees |
+| **Viewer** | Read-only | Contractors, observers |
+
+### Invite Initial Members
+
+Add your first team members:
+- Enter email addresses
+- Assign roles
+- Send invitations
+
+### Launch!
+
+Click **Create Organization** and you're live! 🚀
 
 </Steps>
 
@@ -118,284 +265,428 @@ Start building your organization by inviting team members
 
 ### Organization Profile
 
-Every organization has a profile page that includes:
+Your organization's public face:
 
-**Basic Information**
-- Organization name and logo
-- Description explaining the organization's purpose
-- Location (optional)
-- Website link
-- Banner image for visual appeal
+**Profile Sections:**
 
-**Statistics**
-- Number of members
-- Number of teams
-- Number of followers
-- Number of stars
-
-**Activity**
-- Recent organization updates
-- Member activity
-- Project highlights
+<Accordions>
+  <Accordion title="Basic Information">
+    - Organization name and slug
+    - Logo and banner
+    - Description and mission
+    - Location
+    - Website link
+    - Industry/category
+  </Accordion>
+  
+  <Accordion title="Statistics">
+    - Total members
+    - Number of teams
+    - Number of projects
+    - Followers count
+    - Stars received
+    - Activity metrics
+  </Accordion>
+  
+  <Accordion title="Teams & Projects">
+    - List of public teams
+    - Featured projects
+    - Recent activity
+    - Achievements
+  </Accordion>
+  
+  <Accordion title="Social">
+    - Followers
+    - Stars
+    - Social media links
+    - Community engagement
+  </Accordion>
+</Accordions>
 
 ### Following Organizations
 
-Stay connected with organizations you're interested in:
+Stay connected without joining:
 
-- **Follow** organizations to get updates
-- See followed organizations on your dashboard
-- Get notified about important announcements
-- Following doesn't make you a member (you still need to join)
+**How Following Works:**
 
-**How to Follow**
-1. Visit any public organization
-2. Click the **Follow** button
-3. You'll now see their updates
-4. Unfollow anytime by clicking **Unfollow**
+| Action | Effect |
+|--------|--------|
+| **Follow** | Get updates from the organization |
+| **Notifications** | Receive announcements |
+| **Dashboard** | See activity in your feed |
+| **Visibility** | Organization sees follower count |
+
+**To Follow:**
+1. Visit organization profile
+2. Click **Follow** button
+3. Receive updates on your dashboard
+4. Unfollow anytime
+
+<Callout type="info">
+  Following is different from joining. Followers get updates but don't have member access.
+</Callout>
 
 ### Starring Organizations
 
-Show appreciation for great organizations:
+Show appreciation:
 
-- **Star** organizations you find valuable
-- Stars appear on the organization's profile
-- Shows community appreciation
-- Helps others discover quality organizations
+- Click the ⭐ **Star** button
+- One-time recognition
+- Appears on organization profile
+- Helps others discover quality orgs
+- Can unstar anytime
 
-**Starring vs Following**
-- **Star**: One-time recognition ("I like this!")
-- **Follow**: Ongoing connection ("Keep me updated!")
+**When to star:**
+- Organization you find valuable
+- Quality projects and community
+- Impressive work
+- Good practices
 
-## Roles and Permissions
+### Organization Audit Logs
 
-Organizations use role-based access control to manage what members can do:
+Track important events (Admin/Owner only):
 
-### Common Roles
+**Logged Events:**
+- Member additions/removals
+- Role changes
+- Settings updates
+- Team creation/deletion
+- Project changes
+- Security events
 
-**Owner**
-- Full control over the organization
-- Can delete the organization
-- Manage all settings and members
-- Assign roles to others
+**Log Details:**
+- Who performed the action
+- What changed
+- When it happened
+- Additional metadata
 
-**Admin**
-- Manage organization settings
-- Create and manage teams
-- Invite and remove members
-- Assign roles (except owner)
-- Configure organization profile
+**Access logs:**
+Settings → Audit Logs → View History
 
-**Member**
-- Access organization content
-- Join teams (if allowed)
-- Participate in projects
-- View organization information
-
-**Viewer**
-- Read-only access
-- Can view organization content
-- Cannot make changes
-- Limited interaction
-
-### Custom Roles
-
-Organizations can create custom roles with specific permissions:
-
-- View organization details
-- Create teams
-- Manage specific teams
-- Invite members
-- Manage projects
-- View audit logs
-- And more...
-
-<Callout type="tip">
-  Check with your organization admin to understand what permissions your role includes.
-</Callout>
-
-## Organization Settings
-
-If you're an admin or owner, you can configure:
-
-### General Settings
-
-**Visibility**
-- **Public**: Anyone can discover and view the organization
-- **Private**: Only members can see organization details
-
-**Join Settings**
-- **Enable Open Join**: Let anyone join without invitation
-- **Invite Only**: Require invitation or approval to join
-
-**Time Zone**
-- Set the organization's primary timezone
-- Helps with scheduling and coordination
-
-### Profile Settings
-
-- Update organization name
-- Change organization slug (URL)
-- Edit description
-- Upload or change logo
-- Add/update banner image
-- Add website and location
-- Set social media links
+## Managing Your Organization
 
 ### Member Management
 
-- View all organization members
-- Assign and change roles
-- Remove members
-- Track member activity
-- See join dates
+**Adding Members:**
 
-### Invite Management
+<Tabs items={['Invite by Email', 'Invite Code', 'Open Join']}>
+  <Tab value="Invite by Email">
+    1. Go to **Organization Settings**
+    2. Click **Members** → **Invite**
+    3. Enter email addresses (one per line)
+    4. Select role for invitees
+    5. Add personal message (optional)
+    6. Click **Send Invitations**
+    
+    Recipients receive email with join link.
+  </Tab>
+  <Tab value="Invite Code">
+    1. Go to **Organization Settings**
+    2. Click **Invite Codes** → **Create**
+    3. Select role for code
+    4. Set expiration date
+    5. Optional: Specify email
+    6. Click **Generate Code**
+    7. Share code with invitee
+    
+    Code can be used once before expiring.
+  </Tab>
+  <Tab value="Open Join">
+    1. Go to **Organization Settings**
+    2. Enable **Open Join**
+    3. Set default role for new members
+    4. Save settings
+    
+    Anyone can now join instantly!
+  </Tab>
+</Tabs>
 
-**Create Invites**
-1. Go to invite management
-2. Click **Create Invite**
-3. Enter invitee's email
-4. Select a role for them
-5. Set expiration date (optional)
-6. Generate and send invite
+**Removing Members:**
 
-**Manage Invites**
-- View pending invites
-- Revoke unused invites
-- Check invite status
-- Resend invitations
+1. Go to **Members** list
+2. Find the member
+3. Click options menu (⋯)
+4. Select **Remove from Organization**
+5. Confirm removal
 
-### Audit Logs
+<Callout type="warning">
+  Removing a member also removes them from all teams and projects within the organization.
+</Callout>
 
-Track all organization activities:
+### Role Management
 
-- Member joins and leaves
-- Role changes
-- Settings updates
-- Team creation and deletion
-- Important actions by users
-- Timestamps for all activities
+**Viewing Members by Role:**
 
-## Organization Best Practices
+| Role | View | Actions |
+|------|------|---------|
+| All Members | See everyone | Filter by role |
+| By Role | See specific role group | Bulk role changes |
+| By Team | Members per team | Team-based management |
 
-### For Organization Leaders
+**Changing Member Roles:**
 
-**Create Clear Structure**
-- Define roles and permissions clearly
-- Set up teams logically
-- Document organization guidelines
-- Communicate expectations
+1. Navigate to **Members**
+2. Find the member
+3. Click **Change Role**
+4. Select new role
+5. Confirm change
 
-**Build a Great Profile**
-- Write a compelling description
-- Use high-quality logo and banner
-- Keep information updated
-- Add relevant links
+**Creating Custom Roles:**
 
-**Foster Engagement**
-- Welcome new members
-- Share updates regularly
-- Recognize contributions
-- Encourage participation
+1. Go to **Settings** → **Roles**
+2. Click **Create Role**
+3. Name the role
+4. Select permissions:
+   - ☑️ Manage members
+   - ☑️ Create teams
+   - ☑️ Manage settings
+   - ☑️ View audit logs
+   - ☑️ Manage billing
+   - And more...
+5. Save role
 
-**Manage Efficiently**
-- Review member activity
-- Update roles as needed
-- Monitor audit logs
-- Respond to requests promptly
+### Organization Settings
 
-### For Members
+**Configurable Options:**
 
-**Understand Your Role**
-- Know what permissions you have
-- Follow organization guidelines
-- Ask if you're unsure about something
+<Accordions>
+  <Accordion title="General Settings">
+    - Organization name
+    - Slug (URL identifier)
+    - Description
+    - Logo and banner
+    - Website URL
+    - Location
+    - Timezone
+  </Accordion>
+  
+  <Accordion title="Privacy & Access">
+    - Visibility (Public/Private)
+    - Join settings (Open/Invitation)
+    - Default role for new members
+    - Member visibility settings
+    - Profile requirements
+  </Accordion>
+  
+  <Accordion title="Team Settings">
+    - Who can create teams
+    - Default team visibility
+    - Team naming conventions
+    - Team permissions
+  </Accordion>
+  
+  <Accordion title="Notifications">
+    - Organization announcements
+    - Member notifications
+    - Activity alerts
+    - Email preferences
+  </Accordion>
+  
+  <Accordion title="Security">
+    - Two-factor authentication requirement
+    - Session timeout
+    - IP restrictions
+    - Security policies
+  </Accordion>
+</Accordions>
 
-**Be Active**
-- Participate in teams and projects
-- Contribute meaningfully
-- Help new members
-- Share your expertise
+## Organization Roles & Permissions
 
-**Stay Professional**
-- Maintain appropriate communication
-- Respect other members
-- Follow organization policies
-- Represent the organization well
+### Standard Roles Explained
 
-## Common Questions
+<Tabs items={['Owner', 'Admin', 'Member', 'Viewer']}>
+  <Tab value="Owner">
+    **Highest level of control**
+    
+    **Can:**
+    - ✅ Delete the organization
+    - ✅ Transfer ownership
+    - ✅ Manage all settings
+    - ✅ Add/remove members (including admins)
+    - ✅ Assign any role
+    - ✅ Manage billing
+    - ✅ View audit logs
+    - ✅ Everything admins can do
+    
+    **Limits:**
+    - Only one owner per organization
+    - Can transfer to another member
+    
+    **Best for:** Founders, CEO
+  </Tab>
+  <Tab value="Admin">
+    **High level of control**
+    
+    **Can:**
+    - ✅ Manage organization settings
+    - ✅ Create and manage teams
+    - ✅ Invite members
+    - ✅ Assign roles (except owner)
+    - ✅ Remove members (except owner)
+    - ✅ Configure team settings
+    - ✅ View audit logs
+    
+    **Cannot:**
+    - ❌ Delete organization
+    - ❌ Remove owner
+    - ❌ Assign owner role
+    - ❌ Transfer ownership
+    
+    **Best for:** Leadership team, managers
+  </Tab>
+  <Tab value="Member">
+    **Standard access**
+    
+    **Can:**
+    - ✅ View organization information
+    - ✅ Join teams (if allowed)
+    - ✅ Participate in projects
+    - ✅ View other members
+    - ✅ Create teams (if allowed)
+    - ✅ Follow and star
+    
+    **Cannot:**
+    - ❌ Change organization settings
+    - ❌ Manage members
+    - ❌ Assign roles
+    - ❌ Delete teams/projects
+    
+    **Best for:** Regular employees, contributors
+  </Tab>
+  <Tab value="Viewer">
+    **Read-only access**
+    
+    **Can:**
+    - ✅ View organization profile
+    - ✅ See public teams/projects
+    - ✅ View member list
+    - ✅ Follow the organization
+    
+    **Cannot:**
+    - ❌ Participate in teams
+    - ❌ Create projects
+    - ❌ Change anything
+    - ❌ Access private content
+    
+    **Best for:** Contractors, observers, auditors
+  </Tab>
+</Tabs>
 
-**What's the difference between an organization and a team?**
+### Permission Matrix
 
-Organizations are the top-level structure that contain multiple teams. Teams are groups within an organization that work on specific projects.
+Complete permissions breakdown:
 
-**Can I be part of multiple organizations?**
+| Permission | Owner | Admin | Member | Viewer |
+|------------|-------|-------|--------|--------|
+| View organization | ✅ | ✅ | ✅ | ✅ |
+| Edit organization profile | ✅ | ✅ | ❌ | ❌ |
+| Delete organization | ✅ | ❌ | ❌ | ❌ |
+| Invite members | ✅ | ✅ | ❌ | ❌ |
+| Remove members | ✅ | ✅ | ❌ | ❌ |
+| Assign roles | ✅ | ✅* | ❌ | ❌ |
+| Create teams | ✅ | ✅ | ⚠️** | ❌ |
+| Delete teams | ✅ | ✅ | ❌ | ❌ |
+| Manage billing | ✅ | ⚠️*** | ❌ | ❌ |
+| View audit logs | ✅ | ✅ | ❌ | ❌ |
+| Create projects | ✅ | ✅ | ✅ | ❌ |
+| Join teams | ✅ | ✅ | ✅ | ❌ |
 
-Yes! You can join as many organizations as you'd like and be active in all of them.
+*Cannot assign Owner role  
+**If setting enabled  
+***If given billing permission
 
-**How do I leave an organization?**
+## Best Practices
 
-Go to the organization page, click on settings (if available), and select "Leave Organization". You'll be removed immediately.
+### For Organization Owners
 
-**Can I create my own organization?**
+<Callout type="tip" title="Success Strategies">
+  **1. Clear Structure:** Define roles and teams clearly  
+  **2. Regular Updates:** Keep profile and info current  
+  **3. Active Management:** Review members and permissions regularly  
+  **4. Communication:** Use announcements for important updates  
+  **5. Security:** Enable 2FA requirements for members  
+  **6. Documentation:** Maintain internal docs and guidelines
+</Callout>
 
-Yes, any FairArena user can create an organization. Just navigate to the Organizations section and click "Create Organization".
+### Organization Naming
 
-**What happens if I'm removed from an organization?**
+**Good names:**
+- ✅ Clear and memorable
+- ✅ Represents your purpose
+- ✅ Professional
+- ✅ Unique
 
-You'll lose access to all teams, projects, and organization content. You'll receive a notification when removed.
+**Avoid:**
+- ❌ Generic names (e.g., "Team")
+- ❌ Special characters
+- ❌ Too long or complex
+- ❌ Confusing abbreviations
 
-**Can I rejoin an organization after leaving?**
+### Member Onboarding
 
-Yes, but you'll need a new invitation or the organization must have open joining enabled.
+Create a smooth onboarding experience:
 
-**Who can see private organizations?**
+1. **Welcome Message:** Send personalized welcome
+2. **Documentation:** Share guidelines and resources
+3. **Initial Team:** Assign to appropriate team
+4. **Buddy System:** Pair with experienced member
+5. **First Tasks:** Give clear initial assignments
 
-Only members of a private organization can view its details, teams, and projects.
+## Troubleshooting
 
-**How many members can an organization have?**
+<Accordions>
+  <Accordion title="Can't create organization">
+    **Possible reasons:**
+    - Account not verified
+    - Name already taken
+    - Slug not available
+    - Need more credits (if applicable)
+    
+    **Solutions:**
+    - Verify your email address
+    - Try a different name/slug
+    - Check credit balance
+    - Contact support
+  </Accordion>
+  
+  <Accordion title="Invite codes not working">
+    **Check:**
+    - Code hasn't expired
+    - Code hasn't been used (if single-use)
+    - Recipient email matches (if specified)
+    - Organization still exists
+    - Recipient has account
+  </Accordion>
+  
+  <Accordion title="Can't remove member">
+    **Reasons:**
+    - You don't have permission
+    - Member is organization owner
+    - Member has higher role than you
+    
+    **Solution:**
+    - Ask an admin/owner
+    - Transfer ownership first (if owner)
+  </Accordion>
+  
+  <Accordion title="Organization not showing in search">
+    **Check:**
+    - Organization is set to Public
+    - Profile is complete
+    - Wait 24 hours for indexing
+    - Verify there are no typos in name
+  </Accordion>
+</Accordions>
 
-There's no hard limit on organization membership. Organizations can scale based on your needs.
+## Next Steps
 
-## Managing Your Organizations
+Now that you understand organizations:
 
-### Your Organizations Dashboard
-
-Access all your organizations from one place:
-
-- See all organizations you're a member of
-- Quick access to each organization
-- View your role in each organization
-- Check recent activity
-- Access settings for organizations you manage
-
-### Notifications
-
-Stay informed about organization activity:
-
-- New member joins
-- Role changes
-- Team invitations
-- Project updates
-- Important announcements
-- @mentions from other members
-
-## What's Next?
-
-Now that you understand organizations, dive deeper into collaboration:
-
-<Cards>
-  <Card title="Teams & Projects" href="/docs/teams-and-projects">
-    Learn about teams and projects within organizations
-  </Card>
-  <Card title="Roles & Permissions" href="/docs/roles-and-permissions">
-    Understand the permission system in detail
-  </Card>
-  <Card title="Collaboration Best Practices" href="/docs/collaboration">
-    Tips for effective team collaboration
-  </Card>
-</Cards>
+- [Create Teams →](/docs/teams)
+- [Start Projects →](/docs/projects)
+- [Manage Roles →](/docs/roles-permissions)
+- [Configure Security →](/docs/security)
 
 ---
 
-Organizations are the foundation of collaboration on FairArena. Make the most of them! 🏢
+**Need help with your organization?** [Contact Support →](/docs/support)

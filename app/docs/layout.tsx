@@ -1,7 +1,7 @@
 import { source } from "@/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
-import { BookOpen, Github, MessageCircle, ExternalLink } from 'lucide-react';
+import { Github, MessageCircle, ExternalLink } from 'lucide-react';
 import Link from "next/link";
 import Image from "next/image";
 
@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       nav={{
         title: (
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-md overflow-hidden bg-white/5 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-md overflow-hidden dark:bg-white/5 bg-black flex items-center justify-center">
               <Image
                 src="https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png"
                 alt="FairArena Logo"

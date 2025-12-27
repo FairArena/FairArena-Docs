@@ -1,0 +1,756 @@
+---
+title: Teams
+description: Collaborate effectively within teams on FairArena
+icon: Users
+---
+
+## What are Teams?
+
+Teams are focused collaboration groups within organizations. They bring together people working on related projects and goals, providing structure, access control, and a dedicated workspace.
+
+<div className="grid md:grid-cols-2 gap-4 my-6">
+  <div className="p-5 rounded-lg border bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/30">
+    <h3 className="font-bold mb-2">🎯 Why Teams?</h3>
+    <ul className="text-sm space-y-1 text-muted-foreground">
+      <li>• Focused collaboration spaces</li>
+      <li>• Granular access control</li>
+      <li>• Project organization</li>
+      <li>• Role-based permissions</li>
+    </ul>
+  </div>
+  <div className="p-5 rounded-lg border bg-gradient-to-br from-green-50 to-green-100 dark:from-green-950/30 dark:to-green-900/30">
+    <h3 className="font-bold mb-2">✨ Team Benefits</h3>
+    <ul className="text-sm space-y-1 text-muted-foreground">
+      <li>• Dedicated workspace</li>
+      <li>• Custom branding</li>
+      <li>• Member management</li>
+      <li>• Audit trail</li>
+    </ul>
+  </div>
+</div>
+
+## Team Hierarchy
+
+Understanding the structure:
+
+```
+Organization
+  └── Team 1
+       ├── Project A
+       ├── Project B
+       └── Members (with roles)
+  └── Team 2
+       ├── Project C
+       └── Members (with roles)
+```
+
+| Level | Description | Example |
+|-------|-------------|---------|
+| **Organization** | Top container | "Acme Corp" |
+| **Team** | Focused group | "Engineering Team" |
+| **Project** | Specific work | "Website Redesign" |
+| **Members** | People with roles | Developers, Designers |
+
+## Finding Teams
+
+### Browse Teams in Your Organization
+
+<Steps>
+
+### Navigate to Teams
+
+Go to your Organization → **Teams** tab
+
+### View Available Teams
+
+See all teams you can access:
+
+| Team Type | Description | Access |
+|-----------|-------------|--------|
+| **Public** | Visible to everyone | Anyone can request to join |
+| **Internal** | Organization members only | Org members can request |
+| **Private** | Members only | Invitation required |
+
+### Filter Teams
+
+Use filters to find specific teams:
+- By visibility (Public/Private/Internal)
+- By activity (Most active)
+- By size (Number of members)
+- By your membership status
+
+### Search Teams
+
+Use search to find teams by name or description
+
+</Steps>
+
+## Team Visibility
+
+Choose who can see and access your team:
+
+<Tabs items={['Public', 'Internal', 'Private']}>
+  <Tab value="Public">
+    **✅ Maximum Visibility**
+    
+    **Who can see:**
+    - ✅ Anyone on the internet
+    - ✅ Organization members
+    - ✅ Non-members
+    
+    **Who can join:**
+    - Anyone can request access
+    - Open join available (optional)
+    
+    **Best for:**
+    - Open-source projects
+    - Community teams
+    - Public initiatives
+    - Marketing/outreach teams
+    
+    **Considerations:**
+    - All content is public
+    - Anyone can see members
+    - Projects may be visible
+  </Tab>
+  <Tab value="Internal">
+    **✅ Organization-Only**
+    
+    **Who can see:**
+    - ✅ Organization members only
+    - ❌ External users
+    - ❌ Non-members
+    
+    **Who can join:**
+    - Organization members can request
+    - Encourages cross-team collaboration
+    
+    **Best for:**
+    - Most teams
+    - Cross-functional work
+    - Company-wide initiatives
+    - General collaboration
+    
+    **Considerations:**
+    - Balanced privacy
+    - Encourages internal networking
+    - Good default choice
+  </Tab>
+  <Tab value="Private">
+    **✅ Maximum Privacy**
+    
+    **Who can see:**
+    - ✅ Team members only
+    - ❌ Other org members
+    - ❌ External users
+    
+    **Who can join:**
+    - Invitation only
+    - No public requests
+    
+    **Best for:**
+    - Sensitive projects
+    - Executive teams
+    - Security/compliance work
+    - Confidential initiatives
+    
+    **Considerations:**
+    - Complete privacy
+    - Reduced discoverability
+    - Manual member management
+  </Tab>
+</Tabs>
+
+## Joining Teams
+
+### Three Ways to Join
+
+<Accordions>
+  <Accordion title="1. Open Join (Instant)">
+    Teams with open join enabled:
+    
+    **Steps:**
+    1. Find the team
+    2. Click **Join Team**
+    3. Instantly become a member 🎉
+    
+    **Requirements:**
+    - Team has "Open Join" enabled
+    - You're in the organization
+    - Meet any team requirements
+  </Accordion>
+  
+  <Accordion title="2. Request Access">
+    For closed teams you can view:
+    
+    **Steps:**
+    1. Navigate to team page
+    2. Click **Request Access**
+    3. Write a message (optional but recommended)
+    4. Submit request
+    5. Wait for admin approval
+    6. Get notification when approved
+    
+    **Tips for requests:**
+    - Explain your interest
+    - Mention relevant skills
+    - Be professional
+    - Follow up after a week if no response
+  </Accordion>
+  
+  <Accordion title="3. Invitation Code">
+    Secure invitation system:
+    
+    **Steps:**
+    1. Receive invite code via email
+    2. Click invitation link
+    3. Review team details
+    4. Accept invitation
+    5. Select role (if options given)
+    6. Join the team
+    
+    **About codes:**
+    - Unique and secure
+    - Role-specific
+    - May have expiration
+    - Single or multi-use
+  </Accordion>
+</Accordions>
+
+## Creating a Team
+
+### Prerequisites
+
+Before creating a team:
+
+| Requirement | Description |
+|-------------|-------------|
+| **Organization Member** | Must be in an organization |
+| **Permission** | Need team creation permission |
+| **Purpose** | Clear goal for the team |
+| **Structure** | Plan for roles and members |
+
+### Creation Process
+
+<Steps>
+
+### Initiate Creation
+
+Organization → **Teams** → **Create Team**
+
+### Basic Information
+
+**Team Name**
+- Clear and descriptive
+- Represents the team's purpose
+- Example: "Engineering Team", "Marketing Squad"
+
+**Team Slug**
+- URL-friendly identifier
+- Auto-generated from name
+- Customizable
+- Example: "engineering-team", "marketing"
+
+**Description**
+- Explain team's purpose
+- What projects team handles
+- Who should join
+- Team goals and focus
+
+### Set Visibility
+
+Choose team visibility:
+
+- ⭕ **Public** - Visible to everyone
+- ⭕ **Internal** - Organization members only (recommended)
+- ⭕ **Private** - Members only
+
+### Join Settings
+
+Configure access:
+
+- ☐ **Enable Open Join** - Anyone can join instantly
+- ☐ **Require Approval** - Manual approval for join requests
+
+### Branding & Identity
+
+**Team Logo**
+- Recommended: 200x200px
+- Formats: PNG, JPG, SVG
+- Represents team visually
+
+**Team Banner**
+- Recommended: 1200x400px
+- Appears on team page
+- Creates visual impact
+
+**Additional Details:**
+- Location (optional)
+- Website URL
+- Timezone
+
+### Create Roles
+
+Define team roles:
+
+| Role | Level | Typical Permissions |
+|------|-------|---------------------|
+| **Team Owner** | Highest | Full control |
+| **Team Admin** | High | Manage most things |
+| **Team Member** | Standard | Contribute to work |
+| **Viewer** | Read-only | View content only |
+
+### Invite Initial Members
+
+Add your first team members:
+1. Enter email addresses
+2. Assign roles
+3. Send invitations
+
+### Launch Team
+
+Click **Create Team** - your team is live! 🚀
+
+</Steps>
+
+## Team Features
+
+### Team Profile
+
+Your team's identity:
+
+<Accordions>
+  <Accordion title="Basic Information">
+    - Team name and slug
+    - Logo and banner
+    - Description and purpose
+    - Location
+    - Website link
+    - Timezone
+    - Visibility status
+  </Accordion>
+  
+  <Accordion title="Members & Roles">
+    - Complete member list
+    - Role assignments
+    - Member activity
+    - Join date
+    - Last active
+  </Accordion>
+  
+  <Accordion title="Projects">
+    - Active projects
+    - Completed projects
+    - Project progress
+    - Recent updates
+  </Accordion>
+  
+  <Accordion title="Activity">
+    - Recent team activity
+    - Member contributions
+    - Project updates
+    - Milestones achieved
+  </Accordion>
+  
+  <Accordion title="Statistics">
+    - Total members
+    - Number of projects
+    - Team activity level
+    - Creation date
+    - Growth metrics
+  </Accordion>
+</Accordions>
+
+### Team Audit Logs
+
+Track all team activities (Admin/Owner):
+
+**Logged Events:**
+
+| Event Type | Description | Information Captured |
+|------------|-------------|----------------------|
+| **Member Changes** | Add/remove members | Who, when, role |
+| **Role Updates** | Role assignments | Old role, new role |
+| **Project Actions** | Create/delete projects | Project details |
+| **Settings Changes** | Team settings updates | What changed |
+| **Invitations** | Invite codes created/used | By whom, for whom |
+
+**Access Audit Logs:**
+Team Settings → Audit Logs → View History
+
+## Managing Your Team
+
+### Member Management
+
+<Tabs items={['Adding Members', 'Managing Roles', 'Removing Members']}>
+  <Tab value="Adding Members">
+    **Via Email Invitation:**
+    1. Team Settings → Members → Invite
+    2. Enter email addresses (one per line)
+    3. Select role
+    4. Add message (optional)
+    5. Send invitations
+    
+    **Via Invite Code:**
+    1. Team Settings → Invite Codes
+    2. Create Code
+    3. Set role and expiration
+    4. Generate and share
+    
+    **Via Open Join:**
+    1. Team Settings → Access
+    2. Enable "Open Join"
+    3. Set default role
+    4. Save settings
+  </Tab>
+  <Tab value="Managing Roles">
+    **View by Role:**
+    - Filter members by role
+    - See role distribution
+    - Identify permission gaps
+    
+    **Change Roles:**
+    1. Navigate to Members
+    2. Find member
+    3. Click options (⋯)
+    4. Select "Change Role"
+    5. Choose new role
+    6. Confirm
+    
+    **Bulk Role Changes:**
+    1. Select multiple members
+    2. Click "Bulk Actions"
+    3. "Change Roles"
+    4. Select new role
+    5. Apply to all selected
+  </Tab>
+  <Tab value="Removing Members">
+    **Individual Removal:**
+    1. Members list
+    2. Find member
+    3. Options (⋯) → Remove
+    4. Confirm removal
+    
+    **Effects of Removal:**
+    - Loses team access
+    - Removed from team projects
+    - Can't view private content
+    - Can request to rejoin (if allowed)
+    
+    **Note:** Member stays in organization
+  </Tab>
+</Tabs>
+
+### Team Settings
+
+Configure your team:
+
+<Accordions>
+  <Accordion title="General Settings">
+    **Editable:**
+    - Team name
+    - Slug (careful - changes URL)
+    - Description
+    - Logo and banner
+    - Website URL
+    - Location
+    - Timezone
+    
+    **Access:** Team Settings → General
+  </Accordion>
+  
+  <Accordion title="Privacy & Access">
+    **Configure:**
+    - Visibility (Public/Internal/Private)
+    - Join settings (Open/Approval)
+    - Default role for new members
+    - Member visibility
+    - Project default visibility
+    
+    **Access:** Team Settings → Privacy
+  </Accordion>
+  
+  <Accordion title="Permissions">
+    **Control:**
+    - Who can create projects
+    - Who can invite members
+    - Who can edit team info
+    - Who can view audit logs
+    - Custom role permissions
+    
+    **Access:** Team Settings → Permissions
+  </Accordion>
+  
+  <Accordion title="Notifications">
+    **Manage:**
+    - Team announcements
+    - Member notifications
+    - Project updates
+    - Activity alerts
+    - Email frequency
+    
+    **Access:** Team Settings → Notifications
+  </Accordion>
+</Accordions>
+
+## Team Roles & Permissions
+
+### Role Comparison
+
+| Permission | Team Owner | Team Admin | Team Member | Viewer |
+|------------|------------|------------|-------------|--------|
+| View team | ✅ | ✅ | ✅ | ✅ |
+| View projects | ✅ | ✅ | ✅ | ✅ |
+| Create projects | ✅ | ✅ | ✅ | ❌ |
+| Edit team profile | ✅ | ✅ | ❌ | ❌ |
+| Invite members | ✅ | ✅ | ⚠️* | ❌ |
+| Remove members | ✅ | ✅ | ❌ | ❌ |
+| Assign roles | ✅ | ✅** | ❌ | ❌ |
+| Delete team | ✅ | ❌ | ❌ | ❌ |
+| Manage settings | ✅ | ✅ | ❌ | ❌ |
+| View audit logs | ✅ | ✅ | ❌ | ❌ |
+| Delete projects | ✅ | ✅ | ❌ | ❌ |
+
+*If permission granted  
+**Cannot assign owner role
+
+### Role Details
+
+<Tabs items={['Team Owner', 'Team Admin', 'Team Member', 'Viewer']}>
+  <Tab value="Team Owner">
+    **Full control over team**
+    
+    **Responsibilities:**
+    - Strategic direction
+    - Team structure
+    - Critical decisions
+    - Member oversight
+    
+    **Unique Powers:**
+    - Delete team
+    - Transfer ownership
+    - Override any decision
+    
+    **Best for:**
+    - Team founders
+    - Department heads
+    - Project leads
+  </Tab>
+  <Tab value="Team Admin">
+    **Day-to-day management**
+    
+    **Responsibilities:**
+    - Member management
+    - Project oversight
+    - Settings configuration
+    - Access control
+    
+    **Limitations:**
+    - Can't delete team
+    - Can't assign owner role
+    - Can't remove owner
+    
+    **Best for:**
+    - Team managers
+    - Senior members
+    - Project coordinators
+  </Tab>
+  <Tab value="Team Member">
+    **Active contributor**
+    
+    **Capabilities:**
+    - Work on projects
+    - Create projects (usually)
+    - Collaborate with team
+    - View team content
+    
+    **Limitations:**
+    - Can't manage team
+    - Can't change settings
+    - Limited admin access
+    
+    **Best for:**
+    - Regular team members
+    - Contributors
+    - Developers/designers
+  </Tab>
+  <Tab value="Viewer">
+    **Read-only observer**
+    
+    **Access:**
+    - View team information
+    - See projects
+    - Read content
+    - Monitor progress
+    
+    **Limitations:**
+    - Can't contribute
+    - Can't create projects
+    - Can't edit anything
+    
+    **Best for:**
+    - Stakeholders
+    - Observers
+    - Auditors
+    - External reviewers
+  </Tab>
+</Tabs>
+
+## Team Invitations
+
+### Creating Invite Codes
+
+Generate secure team invitations:
+
+<Steps>
+
+### Navigate to Invite Codes
+
+Team Settings → Invite Codes → Create Code
+
+### Configure Code
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| **Role** | Owner, Admin, Member, Viewer | Default role for invitee |
+| **Expiration** | 1-90 days or custom | When code expires |
+| **Email** | Optional | Restrict to specific email |
+| **Max Uses** | 1, 5, 10, unlimited | How many times code can be used |
+
+### Generate & Share
+
+1. Click **Generate Code**
+2. Copy invite link
+3. Share via email, chat, etc.
+4. Track code usage
+
+### Monitor Codes
+
+View all active codes:
+- See usage count
+- Check expiration
+- Revoke if needed
+- Generate new codes
+
+</Steps>
+
+### Invite Code Best Practices
+
+**Security:**
+- ✅ Set expiration dates
+- ✅ Limit to specific emails when possible
+- ✅ Use single-use codes for sensitive teams
+- ✅ Revoke unused codes regularly
+
+**Organization:**
+- ✅ Name codes descriptively
+- ✅ Track who codes are sent to
+- ✅ Monitor code usage
+- ✅ Clean up expired codes
+
+## Team Best Practices
+
+### Team Structure
+
+<Callout type="tip" title="Organizing Teams">
+  **By Function:** Engineering, Marketing, Sales  
+  **By Product:** Product A Team, Product B Team  
+  **By Geography:** APAC Team, EMEA Team, Americas Team  
+  **By Initiative:** Launch Team, Research Team  
+  **Hybrid:** Engineering-Product A, Marketing-Product B
+</Callout>
+
+### Effective Team Management
+
+**Do:**
+- ✅ Define clear team purpose
+- ✅ Set appropriate visibility
+- ✅ Assign roles thoughtfully
+- ✅ Keep member list current
+- ✅ Regular team updates
+- ✅ Use audit logs for accountability
+- ✅ Establish team norms
+
+**Don't:**
+- ❌ Make too many teams
+- ❌ Overly complex structure
+- ❌ Ignore inactive members
+- ❌ Set wrong visibility
+- ❌ Forget to update info
+
+### Team Communication
+
+**Effective Practices:**
+1. **Regular Updates:** Keep team informed
+2. **Clear Roles:** Everyone knows their responsibility
+3. **Open Communication:** Encourage questions
+4. **Documentation:** Maintain team docs
+5. **Recognition:** Celebrate achievements
+
+## Troubleshooting
+
+<Accordions>
+  <Accordion title="Can't create team">
+    **Check:**
+    - You're in an organization
+    - You have permission to create teams
+    - Organization has space for more teams
+    - Name/slug not already taken
+    
+    **Solutions:**
+    - Ask organization admin for permission
+    - Try different name/slug
+    - Check organization limits
+  </Accordion>
+  
+  <Accordion title="Can't invite members">
+    **Reasons:**
+    - Insufficient permissions
+    - Email already invited
+    - User already in team
+    - Organization limits reached
+    
+    **Solutions:**
+    - Check your role permissions
+    - Verify email address
+    - Check if user is already member
+    - Contact organization owner
+  </Accordion>
+  
+  <Accordion title="Invite code not working">
+    **Check:**
+    - Code hasn't expired
+    - Max uses not reached
+    - Email matches (if specified)
+    - User in organization (for Internal teams)
+    
+    **Solutions:**
+    - Generate new code
+    - Check code settings
+    - Verify user requirements
+  </Accordion>
+  
+  <Accordion title="Can't change team visibility">
+    **Reasons:**
+    - Insufficient permissions
+    - Organization policy restrictions
+    - Active projects prevent change
+    
+    **Solutions:**
+    - Ask team owner/admin
+    - Check organization settings
+    - Review project visibility first
+  </Accordion>
+</Accordions>
+
+## Next Steps
+
+Now that you understand teams:
+
+- [Create Projects →](/docs/projects)
+- [Manage Permissions →](/docs/roles-permissions)
+- [Set Up Notifications →](/docs/notifications)
+
+---
+
+**Need help with teams?** [Contact Support →](/docs/support)

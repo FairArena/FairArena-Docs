@@ -1,0 +1,599 @@
+---
+title: Roles & Permissions
+description: Understanding the role-based access control system on FairArena
+icon: Shield
+---
+
+## Understanding Roles
+
+FairArena uses a comprehensive role-based access control (RBAC) system to manage what users can do at different levels of the platform.
+
+<div className="my-6 p-6 rounded-xl bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/30 dark:to-purple-900/30 border border-indigo-200 dark:border-indigo-800">
+  <h3 className="text-lg font-bold mb-3">🎯 Three-Level Role System</h3>
+  <div className="grid md:grid-cols-3 gap-4 text-sm">
+    <div>
+      <p className="font-semibold mb-1">1️⃣ Organization Level</p>
+      <p className="text-muted-foreground">Controls organization-wide access</p>
+    </div>
+    <div>
+      <p className="font-semibold mb-1">2️⃣ Team Level</p>
+      <p className="text-muted-foreground">Manages team-specific permissions</p>
+    </div>
+    <div>
+      <p className="font-semibold mb-1">3️⃣ Project Level</p>
+      <p className="text-muted-foreground">Defines project access rights</p>
+    </div>
+  </div>
+</div>
+
+## Role Hierarchy
+
+### How Roles Work Together
+
+```
+Organization Role (Broadest)
+  └── Grants organization-wide access
+      └── Team Role (Intermediate)
+          └── Controls team participation
+              └── Project Role (Specific)
+                  └── Defines project permissions
+```
+
+**Key Principles:**
+
+| Principle | Description | Example |
+|-----------|-------------|---------|
+| **Inheritance** | Higher roles include lower permissions | Org Admin can access teams |
+| **Specificity** | Project roles override team defaults | Project Lead > Team Member |
+| **Separation** | Each level independent | Team role ≠ Project role |
+| **Flexibility** | Multiple roles possible | Admin in Org, Member in Team |
+
+## Organization Roles
+
+### Standard Organization Roles
+
+<Tabs items={['Owner', 'Admin', 'Member', 'Viewer']}>
+  <Tab value="Owner">
+    **Supreme Authority**
+    
+    **Full Permissions:**
+    - ✅ Delete organization
+    - ✅ Transfer ownership
+    - ✅ Manage all settings
+    - ✅ Control billing
+    - ✅ Add/remove anyone
+    - ✅ Assign any role
+    - ✅ Create/delete teams
+    - ✅ Access all content
+    - ✅ View audit logs
+    - ✅ Override any decision
+    
+    **Limitations:**
+    - Only ONE owner per organization
+    - Can transfer ownership to another member
+    
+    **Typical Users:**
+    - Company founders
+    - CEOs
+    - Organization creators
+    
+    **Use Case:**  
+    Strategic decisions, critical changes, ownership transfers
+  </Tab>
+  <Tab value="Admin">
+    **High-Level Management**
+    
+    **Can Do:**
+    - ✅ Manage organization settings
+    - ✅ Create and manage teams
+    - ✅ Invite and remove members
+    - ✅ Assign roles (except owner)
+    - ✅ Configure organization profile
+    - ✅ Access audit logs
+    - ✅ Manage integrations
+    - ✅ Set policies
+    
+    **Cannot Do:**
+    - ❌ Delete organization
+    - ❌ Remove owner
+    - ❌ Transfer ownership
+    - ❌ Assign owner role
+    
+    **Typical Users:**
+    - CTOs, VPs
+    - Department heads
+    - Senior managers
+    
+    **Use Case:**  
+    Day-to-day management, member administration, team oversight
+  </Tab>
+  <Tab value="Member">
+    **Standard Access**
+    
+    **Can Do:**
+    - ✅ View organization info
+    - ✅ Join teams (if allowed)
+    - ✅ Participate in projects
+    - ✅ Create teams (if permitted)
+    - ✅ View other members
+    - ✅ Use organization resources
+    - ✅ Follow organization
+    - ✅ Star organization
+    
+    **Cannot Do:**
+    - ❌ Change organization settings
+    - ❌ Manage members
+    - ❌ Assign roles
+    - ❌ Delete content
+    - ❌ Access admin features
+    
+    **Typical Users:**
+    - Regular employees
+    - Contributors
+    - Team members
+    
+    **Use Case:**  
+    Regular work, collaboration, project participation
+  </Tab>
+  <Tab value="Viewer">
+    **Read-Only Observer**
+    
+    **Can Do:**
+    - ✅ View organization profile
+    - ✅ See public teams/projects
+    - ✅ View member list (if public)
+    - ✅ Follow organization
+    - ✅ Access public content
+    
+    **Cannot Do:**
+    - ❌ Join teams
+    - ❌ Create projects
+    - ❌ Participate in work
+    - ❌ Edit anything
+    - ❌ Access private content
+    
+    **Typical Users:**
+    - External stakeholders
+    - Auditors
+    - Contractors
+    - Observers
+    
+    **Use Case:**  
+    Monitoring, oversight, reporting, observation
+  </Tab>
+</Tabs>
+
+### Organization Permission Matrix
+
+| Permission | Owner | Admin | Member | Viewer |
+|------------|:-----:|:-----:|:------:|:------:|
+| View organization | ✅ | ✅ | ✅ | ✅ |
+| Edit organization profile | ✅ | ✅ | ❌ | ❌ |
+| Delete organization | ✅ | ❌ | ❌ | ❌ |
+| Manage billing | ✅ | ⚠️ | ❌ | ❌ |
+| Invite members | ✅ | ✅ | ❌ | ❌ |
+| Remove members | ✅ | ✅ | ❌ | ❌ |
+| Assign roles | ✅ | ✅* | ❌ | ❌ |
+| Create teams | ✅ | ✅ | ⚠️ | ❌ |
+| Delete teams | ✅ | ✅ | ❌ | ❌ |
+| View audit logs | ✅ | ✅ | ❌ | ❌ |
+| Manage settings | ✅ | ✅ | ❌ | ❌ |
+| Join teams | ✅ | ✅ | ✅ | ❌ |
+| View members | ✅ | ✅ | ✅ | ⚠️ |
+
+*Cannot assign Owner role  
+⚠️ = If permission granted or setting enabled
+
+## Team Roles
+
+### Standard Team Roles
+
+<Tabs items={['Team Owner', 'Team Admin', 'Team Member', 'Viewer']}>
+  <Tab value="Team Owner">
+    **Team Leadership**
+    
+    **Full Team Control:**
+    - ✅ Delete team
+    - ✅ Transfer ownership
+    - ✅ All admin permissions
+    - ✅ Override decisions
+    - ✅ Manage all projects
+    - ✅ Control team settings
+    - ✅ Assign any team role
+    
+    **Typical Users:**
+    - Team leads
+    - Project managers
+    - Department heads
+    
+    **Responsibility:**  
+    Team direction, structure, critical decisions
+  </Tab>
+  <Tab value="Team Admin">
+    **Team Management**
+    
+    **Can Do:**
+    - ✅ Manage team settings
+    - ✅ Create/manage projects
+    - ✅ Invite/remove members
+    - ✅ Assign roles (not owner)
+    - ✅ Configure team profile
+    - ✅ View audit logs
+    - ✅ Manage permissions
+    
+    **Cannot Do:**
+    - ❌ Delete team
+    - ❌ Remove owner
+    - ❌ Transfer ownership
+    
+    **Typical Users:**
+    - Senior team members
+    - Project coordinators
+    - Team leads (deputy)
+    
+    **Responsibility:**  
+    Daily management, member coordination
+  </Tab>
+  <Tab value="Team Member">
+    **Active Contributor**
+    
+    **Can Do:**
+    - ✅ View team info
+    - ✅ Work on projects
+    - ✅ Create projects (usually)
+    - ✅ Collaborate with team
+    - ✅ Access team resources
+    - ✅ Participate in discussions
+    
+    **Cannot Do:**
+    - ❌ Manage team
+    - ❌ Change settings
+    - ❌ Remove members
+    - ❌ Assign roles
+    
+    **Typical Users:**
+    - Regular team members
+    - Developers, designers
+    - Contributors
+    
+    **Responsibility:**  
+    Project work, collaboration, delivery
+  </Tab>
+  <Tab value="Viewer">
+    **Team Observer**
+    
+    **Can Do:**
+    - ✅ View team information
+    - ✅ See projects
+    - ✅ View members
+    - ✅ Read content
+    
+    **Cannot Do:**
+    - ❌ Contribute to projects
+    - ❌ Create anything
+    - ❌ Edit content
+    - ❌ Participate actively
+    
+    **Typical Users:**
+    - Stakeholders
+    - Observers
+    - External reviewers
+    
+    **Responsibility:**  
+    Monitoring, reporting, observation
+  </Tab>
+</Tabs>
+
+### Team Permission Matrix
+
+| Permission | Owner | Admin | Member | Viewer |
+|------------|:-----:|:-----:|:------:|:------:|
+| View team | ✅ | ✅ | ✅ | ✅ |
+| Edit team profile | ✅ | ✅ | ❌ | ❌ |
+| Delete team | ✅ | ❌ | ❌ | ❌ |
+| Invite members | ✅ | ✅ | ⚠️ | ❌ |
+| Remove members | ✅ | ✅ | ❌ | ❌ |
+| Assign roles | ✅ | ✅* | ❌ | ❌ |
+| Create projects | ✅ | ✅ | ✅ | ❌ |
+| Delete projects | ✅ | ✅ | ❌ | ❌ |
+| Manage settings | ✅ | ✅ | ❌ | ❌ |
+| View audit logs | ✅ | ✅ | ❌ | ❌ |
+| Work on projects | ✅ | ✅ | ✅ | ❌ |
+| Comment | ✅ | ✅ | ✅ | ⚠️ |
+
+## Project Roles
+
+### Standard Project Roles
+
+<Tabs items={['Project Owner', 'Project Admin', 'Contributor', 'Reviewer', 'Viewer']}>
+  <Tab value="Project Owner">
+    **Project Leadership**
+    
+    **Full Project Control:**
+    - ✅ Delete project
+    - ✅ All permissions
+    - ✅ Manage all aspects
+    - ✅ Override decisions
+    - ✅ Control access
+    - ✅ Set direction
+    
+    **Typical:** Project leads, PMs
+  </Tab>
+  <Tab value="Project Admin">
+    **Project Management**
+    
+    **Can Do:**
+    - ✅ Manage settings
+    - ✅ Add/remove members
+    - ✅ Assign roles (not owner)
+    - ✅ Edit content
+    - ✅ Configure project
+    
+    **Cannot:** Delete project, remove owner
+    
+    **Typical:** Senior contributors, coordinators
+  </Tab>
+  <Tab value="Contributor">
+    **Active Worker**
+    
+    **Can Do:**
+    - ✅ Edit content
+    - ✅ Create content
+    - ✅ Comment
+    - ✅ Collaborate
+    - ✅ Submit work
+    
+    **Cannot:** Manage members, settings
+    
+    **Typical:** Developers, designers, writers
+  </Tab>
+  <Tab value="Reviewer">
+    **Review & Approve**
+    
+    **Can Do:**
+    - ✅ View content
+    - ✅ Comment
+    - ✅ Review work
+    - ✅ Approve/reject
+    
+    **Cannot:** Edit content, manage
+    
+    **Typical:** QA, reviewers, approvers
+  </Tab>
+  <Tab value="Viewer">
+    **Observer Only**
+    
+    **Can Do:**
+    - ✅ View content
+    - ✅ Read discussions
+    
+    **Cannot:** Edit, comment, participate
+    
+    **Typical:** Stakeholders, observers
+  </Tab>
+</Tabs>
+
+### Project Permission Matrix
+
+| Permission | Owner | Admin | Contributor | Reviewer | Viewer |
+|------------|:-----:|:-----:|:-----------:|:--------:|:------:|
+| View project | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Edit content | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Delete content | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Create content | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Comment | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Review/approve | ✅ | ✅ | ⚠️ | ✅ | ❌ |
+| Add members | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Remove members | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Assign roles | ✅ | ✅* | ❌ | ❌ | ❌ |
+| Edit settings | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Delete project | ✅ | ❌ | ❌ | ❌ | ❌ |
+
+## Custom Roles
+
+### Creating Custom Roles
+
+Define roles tailored to your workflow:
+
+<Steps>
+
+### Navigate to Role Management
+
+Organization/Team/Project Settings → Roles → Create Custom Role
+
+### Name Your Role
+
+Choose a descriptive name:
+- "QA Engineer"
+- "Content Editor"
+- "Designer"
+- "Stakeholder"
+
+### Select Permissions
+
+**Core Permissions:**
+- ☐ View content
+- ☐ Create content
+- ☐ Edit content
+- ☐ Delete content
+- ☐ Comment
+- ☐ Review/approve
+
+**Member Permissions:**
+- ☐ View members
+- ☐ Invite members
+- ☐ Remove members
+- ☐ Change member roles
+
+**Administrative:**
+- ☐ Edit settings
+- ☐ Manage roles
+- ☐ View audit logs
+- ☐ Delete entity
+
+### Save and Assign
+
+Role is ready to assign to members
+
+</Steps>
+
+### Custom Role Examples
+
+<Tabs items={['QA Engineer', 'Content Editor', 'External Reviewer']}>
+  <Tab value="QA Engineer">
+    **Permissions:**
+    - ✅ View all content
+    - ✅ Comment on work
+    - ✅ Review and approve
+    - ✅ Report issues
+    - ❌ Edit content directly
+    - ❌ Delete anything
+    
+    **Use Case:** Quality assurance, testing, validation
+  </Tab>
+  <Tab value="Content Editor">
+    **Permissions:**
+    - ✅ View content
+    - ✅ Create content
+    - ✅ Edit content
+    - ✅ Comment
+    - ⚠️ Delete own content only
+    - ❌ Manage members
+    
+    **Use Case:** Writers, editors, content creators
+  </Tab>
+  <Tab value="External Reviewer">
+    **Permissions:**
+    - ✅ View specific content
+    - ✅ Comment
+    - ✅ Review
+    - ❌ Edit anything
+    - ❌ See all content
+    - ❌ Access settings
+    
+    **Use Case:** External consultants, client reviewers
+  </Tab>
+</Tabs>
+
+## Role Management
+
+### Assigning Roles
+
+**At Organization Level:**
+1. Organization → Members
+2. Find member
+3. Options → Change Role
+4. Select new role
+5. Confirm
+
+**At Team Level:**
+1. Team → Members
+2. Select member
+3. Change Role
+4. Apply
+
+**At Project Level:**
+1. Project → Members
+2. Member options
+3. Assign role
+4. Save
+
+### Changing Roles
+
+**Single Member:**
+- Navigate to member
+- Change role option
+- Select new role
+- Confirm
+
+**Bulk Changes:**
+- Select multiple members
+- Bulk actions → Change Roles
+- Apply new role
+- Confirm all changes
+
+<Callout type="warning">
+  Changing roles takes effect immediately. Members gain or lose access instantly based on the new role.
+</Callout>
+
+### Removing Roles
+
+When removing someone from a role:
+
+| Level | Effect |
+|-------|--------|
+| **Organization** | Loses all org, team, project access |
+| **Team** | Loses team and team's project access |
+| **Project** | Loses only that project access |
+
+## Best Practices
+
+### Role Assignment
+
+<Callout type="tip" title="Smart Role Management">
+  **Principle of Least Privilege:** Give minimum permissions needed  
+  **Regular Reviews:** Audit roles quarterly  
+  **Clear Documentation:** Document who has what access  
+  **Offboarding Process:** Remove access promptly  
+  **Role Templates:** Create standard roles for common positions
+</Callout>
+
+### Security Guidelines
+
+**Do:**
+- ✅ Assign roles based on job function
+- ✅ Review permissions regularly
+- ✅ Use custom roles when needed
+- ✅ Document role decisions
+- ✅ Remove access promptly when not needed
+- ✅ Use audit logs to track changes
+
+**Don't:**
+- ❌ Over-privilege users
+- ❌ Share admin accounts
+- ❌ Ignore role reviews
+- ❌ Forget to remove ex-members
+- ❌ Grant owner role casually
+
+## Troubleshooting
+
+<Accordions>
+  <Accordion title="Can't assign a role">
+    **Check:**
+    - You have permission to assign roles
+    - Role exists and is active
+    - Not trying to assign higher role than yours
+    - User is member of the entity
+    
+    **Solution:** Contact owner/admin
+  </Accordion>
+  
+  <Accordion title="Lost access after role change">
+    **Reason:** Your role was changed to lower permissions
+    
+    **Solution:**
+    - Contact team/org admin
+    - Request role review
+    - Explain access needs
+  </Accordion>
+  
+  <Accordion title="Custom role not working">
+    **Check:**
+    - Role is active
+    - Permissions are saved
+    - User has been assigned role
+    - No conflicts with other roles
+    
+    **Solution:** Review role settings
+  </Accordion>
+</Accordions>
+
+## Next Steps
+
+- [Manage Security →](/docs/security)
+- [Configure Account →](/docs/account-settings)
+- [View Organizations →](/docs/organizations)
+
+---
+
+**Questions about roles?** [Contact Support →](/docs/support)

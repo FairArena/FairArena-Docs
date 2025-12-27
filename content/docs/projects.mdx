@@ -1,0 +1,832 @@
+---
+title: Projects
+description: Organize and manage projects on FairArena
+icon: FolderKanban
+---
+
+## What are Projects?
+
+Projects are the core work units within teams. They represent specific deliverables, initiatives, or ongoing work that requires coordination among team members.
+
+<div className="my-6 p-6 rounded-xl bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 border border-purple-200 dark:border-purple-800">
+  <h3 className="text-lg font-bold mb-3">Project = Organized Work</h3>
+  <div className="grid md:grid-cols-2 gap-4 text-sm">
+    <div>
+      <p className="font-semibold mb-2">✨ What Projects Provide:</p>
+      <ul className="space-y-1 text-muted-foreground">
+        <li>• Dedicated workspace</li>
+        <li>• Member assignment</li>
+        <li>• Access control</li>
+        <li>• Progress tracking</li>
+      </ul>
+    </div>
+    <div>
+      <p className="font-semibold mb-2">🎯 Use Projects For:</p>
+      <ul className="space-y-1 text-muted-foreground">
+        <li>• Product features</li>
+        <li>• Campaigns</li>
+        <li>• Initiatives</li>
+        <li>• Ongoing work streams</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+## Project Hierarchy
+
+Understanding project structure:
+
+```
+Organization
+  └── Team
+       └── Project
+            ├── Members (with project roles)
+            ├── Resources
+            └── Settings
+```
+
+| Level | Purpose | Access Control |
+|-------|---------|----------------|
+| **Organization** | Top-level container | Organization roles |
+| **Team** | Group collaboration | Team roles |
+| **Project** | Specific work | Project roles |
+| **Members** | Contributors | Individual permissions |
+
+## Finding Projects
+
+### Browse Projects
+
+<Steps>
+
+### Navigate to Projects
+
+Go to your Team → **Projects** tab
+
+### View Available Projects
+
+See projects based on access:
+
+| Project Type | Who Can See | Who Can Join |
+|--------------|-------------|--------------|
+| **Public** | Everyone (internet) | Request to join |
+| **Internal** | Team members | Team members |
+| **Private** | Project members only | Invitation only |
+
+### Filter Projects
+
+Filter by:
+- Visibility level
+- Your membership
+- Activity status
+- Creation date
+- Project size
+
+### Search Projects
+
+Search by project name, description, or keywords
+
+</Steps>
+
+## Project Visibility
+
+Choose the right visibility for your project:
+
+<Tabs items={['Public', 'Internal', 'Private']}>
+  <Tab value="Public">
+    **Maximum Transparency**
+    
+    **Visibility:**
+    - ✅ Anyone on internet
+    - ✅ Search engines
+    - ✅ Non-members
+    
+    **Access:**
+    - Anyone can request to join
+    - Great for open-source
+    - Community engagement
+    
+    **Best For:**
+    - Open-source projects
+    - Public repositories
+    - Community initiatives
+    - Portfolio pieces
+    - Educational projects
+    
+    **⚠️ Consider:**
+    - All content is public
+    - Anyone can see progress
+    - Comments may be visible
+  </Tab>
+  <Tab value="Internal">
+    **Team-Level Access**
+    
+    **Visibility:**
+    - ✅ Team members
+    - ❌ External users
+    - ❌ Other teams (by default)
+    
+    **Access:**
+    - Team members can see and join
+    - Controlled by team membership
+    - Default choice for most projects
+    
+    **Best For:**
+    - Regular team projects
+    - Internal features
+    - Team collaborations
+    - Most use cases
+    
+    **✨ Benefits:**
+    - Good privacy
+    - Easy access for team
+    - Encourages collaboration
+  </Tab>
+  <Tab value="Private">
+    **Complete Privacy**
+    
+    **Visibility:**
+    - ✅ Project members only
+    - ❌ Other team members
+    - ❌ External users
+    
+    **Access:**
+    - Invitation only
+    - No public discovery
+    - Maximum security
+    
+    **Best For:**
+    - Sensitive work
+    - Client projects
+    - Security-related work
+    - Executive initiatives
+    - Confidential features
+    
+    **🔒 Security:**
+    - Complete isolation
+    - Audit trail maintained
+    - Strict access control
+  </Tab>
+</Tabs>
+
+## Creating a Project
+
+### Planning Your Project
+
+Before creating, consider:
+
+| Aspect | Questions to Ask |
+|--------|------------------|
+| **Purpose** | What will this project deliver? |
+| **Scope** | What's included/excluded? |
+| **Team** | Who needs to be involved? |
+| **Visibility** | Who should see this? |
+| **Duration** | Is this temporary or ongoing? |
+| **Resources** | What do we need? |
+
+### Creation Process
+
+<Steps>
+
+### Initiate Creation
+
+Team Page → **Projects** → **Create Project**
+
+### Basic Information
+
+**Project Name**
+- Clear and descriptive
+- Indicates purpose
+- Easy to remember
+
+**Examples:**
+- "Website Redesign 2024"
+- "Mobile App v2.0"
+- "Q4 Marketing Campaign"
+- "API Integration Project"
+
+**Slug**
+- URL-friendly identifier
+- Auto-generated from name
+- Customizable
+- Permanent (changes carefully!)
+
+### Write Description
+
+Explain the project:
+
+**Include:**
+- Project goals and objectives
+- What will be delivered
+- Timeline (if applicable)
+- Key requirements
+- Success criteria
+
+**Example:**
+```
+Redesign the company website with modern UI/UX, improved 
+performance, and mobile responsiveness. Launch target: Q2 2024.
+
+Key goals:
+- 50% faster load times
+- Mobile-first design
+- Accessibility compliance (WCAG 2.1)
+- SEO optimization
+```
+
+### Set Visibility
+
+Choose project visibility:
+
+- ⭕ **Public** - Maximum transparency
+- ⭕ **Internal** - Team members (recommended)
+- ⭕ **Private** - Members only
+
+### Configure Access
+
+**Join Settings:**
+- ☐ Enable open join (team members can join freely)
+- ☐ Require approval for join requests
+
+**Default Role:**
+- Select default role for new members
+
+### Add Project Details
+
+**Optional but recommended:**
+
+**Project Profile:**
+- Logo/icon
+- Banner image
+- Website/repository link
+- Documentation link
+
+**Metadata:**
+- Project status (Planning, Active, Complete)
+- Timeline/milestones
+- Priority level
+- Tags/labels
+
+### Assign Initial Members
+
+Add your first team:
+1. Search team members
+2. Assign project roles
+3. Set permissions
+4. Send notifications
+
+### Create Project Roles
+
+Define project-specific roles:
+
+| Role | Level | Typical Use |
+|------|-------|-------------|
+| **Project Lead** | Highest | Project manager |
+| **Contributor** | Standard | Active workers |
+| **Reviewer** | Review | QA, approval |
+| **Viewer** | Read-only | Stakeholders |
+
+### Launch Project
+
+Click **Create Project** - you're ready to work! 🚀
+
+</Steps>
+
+## Project Features
+
+### Project Dashboard
+
+Your project command center:
+
+<Accordions>
+  <Accordion title="Overview">
+    **See at a glance:**
+    - Project status
+    - Member count
+    - Activity timeline
+    - Recent updates
+    - Key metrics
+    - Quick actions
+  </Accordion>
+  
+  <Accordion title="Members">
+    **Member management:**
+    - All project members
+    - Role assignments
+    - Activity levels
+    - Last active
+    - Invite new members
+    - Manage permissions
+  </Accordion>
+  
+  <Accordion title="Activity">
+    **Track progress:**
+    - Recent updates
+    - Member contributions
+    - Milestones reached
+    - Changes made
+    - Comments and discussions
+    - File updates
+  </Accordion>
+  
+  <Accordion title="Settings">
+    **Configure project:**
+    - Basic information
+    - Visibility settings
+    - Access control
+    - Notifications
+    - Integrations
+    - Danger zone (delete)
+  </Accordion>
+  
+  <Accordion title="Analytics">
+    **Project insights:**
+    - Contribution stats
+    - Activity trends
+    - Member engagement
+    - Progress metrics
+    - Time tracking
+    - Completion rates
+  </Accordion>
+</Accordions>
+
+### Project Profile
+
+Professional project presentation:
+
+**Profile Sections:**
+
+| Section | Content | Purpose |
+|---------|---------|---------|
+| **Header** | Name, logo, status | Identity |
+| **Description** | Goals, objectives | Context |
+| **Statistics** | Members, activity | Metrics |
+| **Resources** | Links, docs | Access |
+| **Team** | Member list | Who's involved |
+| **Timeline** | Key dates | Planning |
+
+### Project Audit Logs
+
+Complete activity history:
+
+**Logged Events:**
+
+<Tabs items={['Member Events', 'Content Events', 'Settings Events']}>
+  <Tab value="Member Events">
+    **Tracked:**
+    - Member additions
+    - Member removals
+    - Role changes
+    - Permission updates
+    - Invitation sent/accepted
+    - Access requests
+    
+    **Details:**
+    - Who performed action
+    - Who was affected
+    - Timestamp
+    - Role changes (old → new)
+  </Tab>
+  <Tab value="Content Events">
+    **Tracked:**
+    - Content created
+    - Content updated
+    - Content deleted
+    - File uploads
+    - Comments added
+    - Status changes
+    
+    **Details:**
+    - What changed
+    - Who made the change
+    - When it happened
+    - Previous vs new values
+  </Tab>
+  <Tab value="Settings Events">
+    **Tracked:**
+    - Visibility changes
+    - Name/description updates
+    - Access settings modified
+    - Role definitions changed
+    - Integration changes
+    - Deletion requests
+    
+    **Details:**
+    - Setting modified
+    - Old value → New value
+    - Changed by
+    - Timestamp
+  </Tab>
+</Tabs>
+
+**Access Logs:**
+Project Settings → Audit Trail → View History
+
+## Managing Your Project
+
+### Member Management
+
+<Tabs items={['Adding Members', 'Managing Roles', 'Removing Members']}>
+  <Tab value="Adding Members">
+    **From Team:**
+    1. Project → Members → Add
+    2. Search team members
+    3. Select members to add
+    4. Assign project role
+    5. Click Add Members
+    
+    **Via Invitation:**
+    1. Project → Settings → Invitations
+    2. Generate invite code
+    3. Set role and expiration
+    4. Share with invitees
+    
+    **Open Join (if enabled):**
+    - Team members can join directly
+    - Assigned default role
+    - Notification to admins
+  </Tab>
+  <Tab value="Managing Roles">
+    **Change Individual Role:**
+    1. Members → Find member
+    2. Click options (⋯)
+    3. Select "Change Role"
+    4. Choose new role
+    5. Confirm change
+    
+    **Bulk Role Changes:**
+    1. Select multiple members
+    2. Bulk Actions → Change Roles
+    3. Select new role
+    4. Apply to selected
+    
+    **View by Role:**
+    - Filter members by role
+    - See role distribution
+    - Identify permission needs
+  </Tab>
+  <Tab value="Removing Members">
+    **Remove Individual:**
+    1. Members → Find member
+    2. Options (⋯) → Remove
+    3. Confirm removal
+    
+    **Bulk Removal:**
+    1. Select members
+    2. Bulk Actions → Remove
+    3. Confirm
+    
+    **Effects:**
+    - Loses project access
+    - Can't view private content
+    - Removed from notifications
+    - Still in team (not removed from team)
+    
+    **Note:** Can be re-added anytime
+  </Tab>
+</Tabs>
+
+### Project Settings
+
+Configure your project:
+
+<Accordions>
+  <Accordion title="General Settings">
+    **Edit:**
+    - Project name
+    - Slug (careful!)
+    - Description
+    - Logo and banner
+    - Website/repo links
+    - Documentation links
+    - Status (Active, Complete, Archived)
+    
+    **Access:** Settings → General
+  </Accordion>
+  
+  <Accordion title="Visibility & Access">
+    **Configure:**
+    - Visibility (Public/Internal/Private)
+    - Join settings (Open/Approval)
+    - Default role for new members
+    - Member visibility
+    - Content visibility
+    
+    **Access:** Settings → Privacy
+    
+    **⚠️ Warning:** Changing to more restrictive can affect access
+  </Accordion>
+  
+  <Accordion title="Roles & Permissions">
+    **Manage:**
+    - View all project roles
+    - Create custom roles
+    - Edit role permissions
+    - Set role hierarchy
+    - Assign default roles
+    
+    **Access:** Settings → Roles
+  </Accordion>
+  
+  <Accordion title="Notifications">
+    **Control:**
+    - Project announcements
+    - Member notifications
+    - Activity alerts
+    - Mention notifications
+    - Email preferences
+    - Notification frequency
+    
+    **Access:** Settings → Notifications
+  </Accordion>
+  
+  <Accordion title="Advanced">
+    **Advanced options:**
+    - Archive project
+    - Transfer ownership
+    - Export project data
+    - Delete project (danger!)
+    
+    **Access:** Settings → Advanced
+  </Accordion>
+</Accordions>
+
+## Project Roles & Permissions
+
+### Standard Project Roles
+
+| Role | Level | Typical Permissions | Best For |
+|------|-------|---------------------|----------|
+| **Project Owner** | Highest | Full control, can delete | Project leads |
+| **Project Admin** | High | Manage settings, members | Senior contributors |
+| **Contributor** | Standard | Edit content, collaborate | Active workers |
+| **Reviewer** | Review | Comment, review, approve | QA, reviewers |
+| **Viewer** | Read-only | View only | Stakeholders |
+
+### Permission Matrix
+
+| Permission | Owner | Admin | Contributor | Reviewer | Viewer |
+|------------|-------|-------|-------------|----------|--------|
+| View project | ✅ | ✅ | ✅ | ✅ | ✅ |
+| View members | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Edit content | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Add members | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Remove members | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Assign roles | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Edit settings | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Delete content | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Comment | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Review/approve | ✅ | ✅ | ⚠️ | ✅ | ❌ |
+| View audit logs | ✅ | ✅ | ❌ | ❌ | ❌ |
+| Delete project | ✅ | ❌ | ❌ | ❌ | ❌ |
+
+⚠️ = If permission granted
+
+### Creating Custom Roles
+
+Define roles specific to your workflow:
+
+<Steps>
+
+### Navigate to Roles
+
+Project Settings → Roles → Create Custom Role
+
+### Name the Role
+
+Choose a descriptive name:
+- "QA Engineer"
+- "Content Writer"
+- "Designer"
+- "Stakeholder"
+
+### Select Permissions
+
+**Content Permissions:**
+- ☐ View content
+- ☐ Create content
+- ☐ Edit content
+- ☐ Delete content
+- ☐ Approve content
+
+**Member Permissions:**
+- ☐ View members
+- ☐ Invite members
+- ☐ Remove members
+- ☐ Change roles
+
+**Project Permissions:**
+- ☐ Edit project info
+- ☐ Change settings
+- ☐ View analytics
+- ☐ Access audit logs
+
+**Administrative:**
+- ☐ Manage roles
+- ☐ Delete project
+
+### Save Role
+
+Role is now available for assignment
+
+</Steps>
+
+## Project Invitations
+
+### Creating Invite Codes
+
+Generate secure project invitations:
+
+**Code Configuration:**
+
+| Setting | Options | Description |
+|---------|---------|-------------|
+| **Role** | Any project role | Default role for invitee |
+| **Expiration** | 1-90 days or custom | Validity period |
+| **Email** | Optional | Restrict to specific email |
+| **Max Uses** | 1, 5, unlimited | Usage limit |
+| **Message** | Optional | Welcome message |
+
+**Steps:**
+1. Project Settings → Invitations
+2. Create Invite Code
+3. Configure settings
+4. Generate code
+5. Share securely
+
+### Managing Invitations
+
+**Track invitations:**
+- Active invite codes
+- Usage statistics
+- Expiration status
+- Revoke codes
+- Regenerate expired codes
+
+## Project Best Practices
+
+### Organization
+
+<Callout type="tip" title="Project Organization Tips">
+  **1. Clear Goals:** Define what success looks like  
+  **2. Right Size:** Not too big, not too small  
+  **3. Active Ownership:** Assign clear project leads  
+  **4. Regular Updates:** Keep stakeholders informed  
+  **5. Member Engagement:** Ensure everyone contributes  
+  **6. Documentation:** Maintain project docs
+</Callout>
+
+### Naming Conventions
+
+**Good project names:**
+- ✅ Descriptive and specific
+- ✅ Include version/phase if applicable
+- ✅ Indicate purpose clearly
+- ✅ Professional and clear
+
+**Examples:**
+- ✅ "Website Redesign Q1 2024"
+- ✅ "Mobile App v2.0 Development"
+- ✅ "Customer Portal Integration"
+- ✅ "Marketing Campaign - Summer"
+
+**Avoid:**
+- ❌ Generic names ("Project 1")
+- ❌ Only dates ("2024-01")
+- ❌ Internal codes ("PROJ-ABC")
+- ❌ Unclear abbreviations
+
+### Project Lifecycle
+
+**Typical project phases:**
+
+| Phase | Activities | Status |
+|-------|-----------|--------|
+| **Planning** | Define scope, team, goals | Draft |
+| **Active** | Main work, collaboration | In Progress |
+| **Review** | QA, testing, approval | Review |
+| **Complete** | Delivered, documented | Complete |
+| **Archive** | Inactive but accessible | Archived |
+
+### Status Management
+
+**Update project status regularly:**
+- Keep stakeholders informed
+- Reflect current state accurately
+- Use status to filter/organize
+- Archive completed projects
+
+## Advanced Features
+
+### Project Templates
+
+Create templates for common project types:
+
+**Benefits:**
+- Consistent structure
+- Faster setup
+- Best practices built-in
+- Easier onboarding
+
+**Creating Templates:**
+1. Set up ideal project structure
+2. Define standard roles
+3. Add default settings
+4. Save as template
+5. Reuse for new projects
+
+### Project Analytics
+
+Track project health (Owner/Admin):
+
+**Available Metrics:**
+
+| Metric | Description | Use |
+|--------|-------------|-----|
+| **Activity Level** | Actions per day/week | Engagement |
+| **Member Contribution** | Who's most active | Recognition |
+| **Progress Rate** | Work completion speed | Planning |
+| **Milestone Tracking** | Key dates and goals | Management |
+| **Time Distribution** | Where time is spent | Optimization |
+
+**Access:** Project → Analytics
+
+### Bulk Operations
+
+Manage multiple aspects efficiently:
+
+**Available Actions:**
+- Bulk member addition
+- Bulk role changes
+- Bulk notifications
+- Bulk status updates
+- Export project data
+
+## Troubleshooting
+
+<Accordions>
+  <Accordion title="Can't create project">
+    **Check:**
+    - You're in a team
+    - You have permission to create projects
+    - Team has space for more projects
+    - Project name not taken in team
+    
+    **Solutions:**
+    - Ask team admin for permission
+    - Try different name
+    - Check team limits
+    - Verify team membership
+  </Accordion>
+  
+  <Accordion title="Can't add members">
+    **Reasons:**
+    - Insufficient permissions
+    - Person not in team
+    - Already a member
+    - Project limit reached
+    
+    **Solutions:**
+    - Check your role permissions
+    - Ensure person is team member
+    - Verify they're not already added
+    - Contact project owner
+  </Accordion>
+  
+  <Accordion title="Can't change visibility">
+    **Reasons:**
+    - Insufficient permissions
+    - Team/org policy restrictions
+    - Active content prevents change
+    
+    **Solutions:**
+    - Ask project owner
+    - Check team settings
+    - Review content visibility first
+  </Accordion>
+  
+  <Accordion title="Lost access to project">
+    **Possible causes:**
+    - Removed from project
+    - Removed from team
+    - Role changed to lower permission
+    - Project visibility changed
+    
+    **Solutions:**
+    - Check with project admin
+    - Verify team membership
+    - Request re-addition
+    - Check email for notifications
+  </Accordion>
+</Accordions>
+
+## Next Steps
+
+Master project management:
+
+- [Understand Roles →](/docs/roles-permissions)
+- [Set Up Notifications →](/docs/notifications)
+- [Manage Security →](/docs/security)
+
+---
+
+**Need help with projects?** [Contact Support →](/docs/support)

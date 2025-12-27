@@ -3,11 +3,20 @@
   "pages": [
     "index",
     "getting-started",
-    "guides",
+    "---Core Features---",
     "features",
+    "profiles",
+    "organizations",
+    "teams",
+    "projects",
+    "---Collaboration---",
+    "roles-permissions",
+    "---Account & Billing---",
     "account",
-    "---Billing & Support---",
-    "credits-and-pricing",
-    "support"
+    "credits",
+    "---Support---",
+    "security",
+    "support",
+    "guides"
   ]
 }

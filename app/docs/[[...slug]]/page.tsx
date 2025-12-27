@@ -42,7 +42,7 @@ export default async function Page(props: {
         footer: (
           <div className="pt-4 mt-4 border-t space-y-4">
             <a
-              href={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
+              href={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}.mdx`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition-colors group"
@@ -84,7 +84,7 @@ export default async function Page(props: {
         <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
         <ViewOptions
           markdownUrl={`${page.url}.mdx`}
-          githubUrl={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
+          githubUrl={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}.mdx`}
         />
       </div>
 
@@ -95,7 +95,7 @@ export default async function Page(props: {
       {/* Page metadata */}
       <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-8 pb-8 border-b">
         <a
-          href={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
+          href={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}.mdx`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-1.5 hover:text-foreground transition-colors"

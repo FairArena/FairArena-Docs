@@ -1,5 +1,4 @@
 import { getPageImage, source } from '@/lib/source';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { ImageResponse } from 'next/og';
 
@@ -42,7 +41,7 @@ export async function GET(
         />
         
         {/* Logo */}
-        <Image
+        <img
           src="https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png"
           alt='Fairarena Logo'
           width="100"
