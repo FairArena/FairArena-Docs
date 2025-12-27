@@ -39,19 +39,6 @@ export default async function Page(props: {
       full={page.data.full}
       tableOfContent={{
         enabled: true,
-        header: (
-          <div className="space-y-3">
-            <div className="pb-3 border-b">
-              <div className="flex flex-col gap-2">
-                <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
-                <ViewOptions
-                  markdownUrl={`${page.url}.mdx`}
-                  githubUrl={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
-                />
-              </div>
-            </div>
-          </div>
-        ),
         footer: (
           <div className="pt-4 mt-4 border-t space-y-4">
             <a
@@ -91,6 +78,16 @@ export default async function Page(props: {
       <DocsTitle className="text-4xl font-bold mb-4">
         {page.data.title}
       </DocsTitle>
+      
+      {/* Page Actions - Copy and Open */}
+      <div className="flex items-center gap-2 mb-4">
+        <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
+        <ViewOptions
+          markdownUrl={`${page.url}.mdx`}
+          githubUrl={`https://github.com/FairArena/FairArena-Docs/blob/main/content/docs/${path}`}
+        />
+      </div>
+
       <DocsDescription className="text-lg text-muted-foreground mb-6">
         {page.data.description}
       </DocsDescription>

@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@orama/core':
-        specifier: ^1.2.15
-        version: 1.2.16
       '@radix-ui/react-collapsible':
         specifier: ^1.1.12
         version: 1.1.12(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -3687,7 +3684,8 @@ snapshots:
   '@next/swc-win32-x64-msvc@16.0.10':
     optional: true
 
-  '@noble/hashes@1.8.0': {}
+  '@noble/hashes@1.8.0':
+    optional: true
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -3709,14 +3707,17 @@ snapshots:
       '@orama/oramacore-events-parser': 0.0.5
       zod: 3.24.3
       zod-to-json-schema: 3.24.5(zod@3.24.3)
+    optional: true
 
   '@orama/cuid2@2.2.3':
     dependencies:
       '@noble/hashes': 1.8.0
+    optional: true
 
   '@orama/orama@3.1.18': {}
 
-  '@orama/oramacore-events-parser@0.0.5': {}
+  '@orama/oramacore-events-parser@0.0.5':
+    optional: true
 
   '@radix-ui/number@1.1.1': {}
 
@@ -6929,12 +6930,14 @@ snapshots:
   zod-to-json-schema@3.24.5(zod@3.24.3):
     dependencies:
       zod: 3.24.3
+    optional: true
 
   zod-validation-error@4.0.2(zod@4.2.1):
     dependencies:
       zod: 4.2.1
 
-  zod@3.24.3: {}
+  zod@3.24.3:
+    optional: true
 
   zod@4.2.1: {}
 

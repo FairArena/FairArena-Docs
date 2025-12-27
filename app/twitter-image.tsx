@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ImageResponse } from 'next/og';
 
 // Route segment config
@@ -49,25 +50,18 @@ export default async function TwitterImage() {
           }}
         />
 
-        {/* Logo/Icon */}
-        <div
+        {/* Logo */}
+        <Image
+          src="https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png"
+          alt='Fairarena Logo'
+          width="120"
+          height="120"
           style={{
-            display: 'flex',
-            width: '120px',
-            height: '120px',
-            background: 'linear-gradient(135deg, #3b82f6 0%, #9333ea 100%)',
-            borderRadius: '24px',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '80px',
-            fontWeight: 'bold',
-            color: 'white',
             marginBottom: '40px',
+            borderRadius: '24px',
             boxShadow: '0 20px 60px rgba(59, 130, 246, 0.5)',
           }}
-        >
-          F
-        </div>
+        />
 
         {/* Title */}
         <div

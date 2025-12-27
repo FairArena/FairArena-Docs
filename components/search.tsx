@@ -4,7 +4,6 @@ import {
   SearchDialog,
   SearchDialogClose,
   SearchDialogContent,
-  SearchDialogFooter,
   SearchDialogHeader,
   SearchDialogIcon,
   SearchDialogInput,
@@ -13,17 +12,11 @@ import {
   type SharedProps,
 } from 'fumadocs-ui/components/dialog/search';
 import { useDocsSearch } from 'fumadocs-core/search/client';
-import { OramaCloud } from '@orama/core';
-
-const client = new OramaCloud({
-  projectId: process.env.NEXT_PUBLIC_ORAMA_PROJECT_ID!,
-  apiKey: process.env.NEXT_PUBLIC_ORAMA_API_KEY!,
-});
 
 export default function CustomSearchDialog(props: SharedProps) {
   const { search, setSearch, query } = useDocsSearch({
-    type: 'orama-cloud',
-    client,
+    type: 'fetch',
+    api: '/api/search',
   });
 
   return (
@@ -41,15 +34,6 @@ export default function CustomSearchDialog(props: SharedProps) {
           <SearchDialogClose />
         </SearchDialogHeader>
         <SearchDialogList items={query.data !== 'empty' ? query.data : null} />
-        <SearchDialogFooter>
-          <a
-            href="https://orama.com"
-            rel="noreferrer noopener"
-            className="ms-auto text-xs text-fd-muted-foreground"
-          >
-            Search powered by Orama
-          </a>
-        </SearchDialogFooter>
       </SearchDialogContent>
     </SearchDialog>
   );
