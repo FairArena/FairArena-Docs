@@ -3,6 +3,7 @@ import './global.css';
 import { Inter } from 'next/font/google';
 import CustomSearchDialog from '@/components/search';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -53,10 +54,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  icons: {
-    icon: '/icon',
-    apple: '/apple-icon',
-  },
   manifest: '/manifest',
 };
 
@@ -94,6 +91,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <RootProvider search={{ SearchDialog: CustomSearchDialog }}>
           {children}
         </RootProvider>
+        
+        <div className="gtranslate_wrapper"></div>
+        
+        <Script id="gtranslate-settings" strategy="afterInteractive">
+          {`window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper"}`}
+        </Script>
+        <Script src="https://cdn.gtranslate.net/widgets/latest/float.js" strategy="afterInteractive" />
       </body>
     </html>
   );

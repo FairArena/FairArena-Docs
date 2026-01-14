@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-md overflow-hidden dark:bg-white/5 bg-black flex items-center justify-center">
               <Image
-                src="https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png"
+                src="/fairArenaLogo.png"
                 alt="FairArena Logo"
                 width={32}
                 height={32}
