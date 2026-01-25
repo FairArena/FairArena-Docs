@@ -2,46 +2,64 @@ import { RootProvider } from 'fumadocs-ui/provider/next';
 import './global.css';
 import { Inter } from 'next/font/google';
 import CustomSearchDialog from '@/components/search';
-import type { Metadata } from 'next';
+
 import Script from 'next/script';
 
 const inter = Inter({
   subsets: ['latin'],
 });
 
+import type { Metadata, Viewport } from 'next';
+
+export const viewport: Viewport = {
+  themeColor: '#000000',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
-    default: 'FairArena Documentation',
-    template: '%s | FairArena Docs',
+    default: 'FairArena - AI-Powered Hackathon Management Platform',
+    template: '%s | FairArena',
   },
-  description: 'Complete documentation for FairArena platform - guides, tutorials, API reference, and more. Learn how to use FairArena effectively.',
-  metadataBase: new URL('https://fair.sakshamg.me'),
-  keywords: ['FairArena', 'documentation', 'guides', 'tutorials', 'API', 'reference', 'platform'],
+  description: 'FairArena - AI-Powered Hackathon Management and Project Evaluation Platform. FairArena is designed for organizers, judges, and participants, automating the judging process with advanced AI to analyze project websites and ensure unbiased, fair evaluations. Features include real-time leaderboards, comprehensive analytics, team collaboration tools, and seamless authentication integration.',
+  metadataBase: new URL('https://docs.fair.sakshamg.me'),
+  keywords: ['hackathon management', 'AI judging', 'project evaluation', 'FairArena', 'hackathon platform', 'organizers', 'judges', 'participants'],
   authors: [{ name: 'FairArena Team' }],
   creator: 'FairArena',
   publisher: 'FairArena',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://fair.sakshamg.me',
-    siteName: 'FairArena Documentation',
-    title: 'FairArena Documentation',
-    description: 'Complete documentation for FairArena platform - guides, tutorials, API reference, and more. Learn how to use FairArena effectively.',
+    url: 'https://docs.fair.sakshamg.me',
+    siteName: 'FairArena',
+    title: 'FairArena - AI-Powered Hackathon Management Platform',
+    description: 'FairArena is designed for organizers, judges, and participants, automating the judging process with advanced AI to analyze project websites and ensure unbiased, fair evaluations.',
     images: [
       {
-        url: '/opengraph-image',
+        url: 'https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png',
         width: 1200,
         height: 630,
-        alt: 'FairArena Documentation',
+        alt: 'FairArena Logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FairArena Documentation',
-    description: 'Complete documentation for FairArena platform - guides, tutorials, API reference, and more.',
-    images: ['/twitter-image'],
+    title: 'FairArena - AI-Powered Hackathon Management Platform',
+    description: 'FairArena is designed for organizers, judges, and participants, automating the judging process with advanced AI to analyze project websites and ensure unbiased, fair evaluations.',
+    images: ['https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png'],
     creator: '@FairArena',
+  },
+  icons: {
+    icon: 'https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png',
+    apple: 'https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png',
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'FairArena',
   },
   robots: {
     index: true,
@@ -54,7 +72,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  manifest: '/manifest',
+  manifest: '/manifest.json',
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -63,18 +81,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     '@type': 'WebSite',
     name: 'FairArena Documentation',
     description: 'Complete documentation for FairArena platform',
-    url: 'https://fair.sakshamg.me',
+    url: 'https://docs.fair.sakshamg.me',
     publisher: {
       '@type': 'Organization',
       name: 'FairArena',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://fair.sakshamg.me/icon',
+        url: 'https://docs.fair.sakshamg.me/icon',
       },
     },
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://fair.sakshamg.me/search?q={search_term_string}',
+      target: 'https://docs.fair.sakshamg.me/search?q={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };

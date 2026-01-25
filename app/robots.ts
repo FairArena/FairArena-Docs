@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://fair.sakshamg.me/sitemap.xml',
+    sitemap: 'https://docs.fair.sakshamg.me/sitemap.xml',
   };
 }
