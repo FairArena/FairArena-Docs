@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { source } from '@/lib/source';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://docs.fair.sakshamg.me';
+  const baseUrl = 'https://docs.fairarena.app';
 
   // Get all documentation pages
   const pages = source.getPages();

@@ -14,6 +14,8 @@ import { InlineTOC } from "fumadocs-ui/components/inline-toc";
 import { Step, Steps } from "fumadocs-ui/components/steps";
 import Link from "next/link";
 import { ChevronRight, Edit, Github } from "lucide-react";
+import { Feedback } from "@/components/feedback/client";
+import { onPageFeedbackAction } from "@/lib/feedback";
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -23,7 +25,7 @@ export default async function Page(props: {
   if (!page) notFound();
 
   const MDX = page.data.body;
-  const path = params.slug?.join('/') || 'index';
+  const path = params.slug?.join("/") || "index";
 
   const breadcrumb = page.slugs.map((slug, i) => ({
     name: slug
@@ -78,7 +80,7 @@ export default async function Page(props: {
       <DocsTitle className="text-4xl font-bold mb-4">
         {page.data.title}
       </DocsTitle>
-      
+
       {/* Page Actions - Copy and Open */}
       <div className="flex items-center gap-2 mb-4">
         <LLMCopyButton markdownUrl={`${page.url}.mdx`} />
@@ -117,6 +119,7 @@ export default async function Page(props: {
           }}
         />
       </DocsBody>
+      <Feedback onSendAction={onPageFeedbackAction} />
     </DocsPage>
   );
 }
@@ -133,7 +136,7 @@ export async function generateMetadata(props: {
   if (!page) notFound();
 
   const image = getPageImage(page);
-  const url = `https://fair.sakshamg.me${page.url}`;
+  const url = `https://fairarena.app${page.url}`;
 
   return {
     title: page.data.title,
@@ -144,9 +147,9 @@ export async function generateMetadata(props: {
     openGraph: {
       title: page.data.title,
       description: page.data.description,
-      type: 'article',
+      type: "article",
       url,
-      siteName: 'FairArena Documentation',
+      siteName: "FairArena Documentation",
       images: [
         {
           url: image.url,
@@ -157,11 +160,11 @@ export async function generateMetadata(props: {
       ],
     },
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: page.data.title,
       description: page.data.description,
       images: [image.url],
-      creator: '@FairArena',
+      creator: "@FairArena",
     },
   };
 }

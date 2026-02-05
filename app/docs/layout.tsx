@@ -1,20 +1,20 @@
 import { source } from "@/lib/source";
 import { DocsLayout } from "fumadocs-ui/layouts/docs";
 import type { ReactNode } from "react";
-import { Github, MessageCircle, ExternalLink } from 'lucide-react';
+import { Github, MessageCircle, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <DocsLayout 
+    <DocsLayout
       tree={source.pageTree}
       nav={{
         title: (
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-md overflow-hidden dark:bg-white/5 bg-black flex items-center justify-center">
               <Image
-                src="https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png"
+                src="https://fra.cloud.appwrite.io/v1/storage/buckets/697b974d001a7a80496e/files/697b9764002453409e98/view?project=69735edc00127d2033d8&mode=admin"
                 alt="FairArena Logo"
                 width={32}
                 height={32}
@@ -25,8 +25,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             <span className="font-bold text-lg">FairArena</span>
           </div>
         ),
-        url: 'https://fair.sakshamg.me',
-        transparentMode: 'top',
+        url: "https://fairarena.app",
+        transparentMode: "top",
       }}
       sidebar={{
         collapsible: true,
@@ -52,7 +52,8 @@ export default function Layout({ children }: { children: ReactNode }) {
             </Link>
             <div className="pt-3 border-t text-xs text-muted-foreground">
               <p className="flex items-center gap-1">
-                Made with <span className="text-red-500 animate-pulse">❤️</span> by FairArena Team
+                Made with <span className="text-red-500 animate-pulse">❤️</span>{" "}
+                by FairArena Team
               </p>
             </div>
           </div>

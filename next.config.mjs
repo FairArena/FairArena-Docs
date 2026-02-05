@@ -9,8 +9,7 @@ const config = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'fairarena.blob.core.windows.net',
-        pathname: '/fairarena/**',
+        hostname: 'fra.cloud.appwrite.io'
       },
     ],
   },

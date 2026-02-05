@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://fairarena.blob.core.windows.net/fairarena/fairArenaLogo.png" alt="FairArena Logo" width="140" height="140">
+  <img src="https://fra.cloud.appwrite.io/v1/storage/buckets/697b974d001a7a80496e/files/697b9764002453409e98/view?project=69735edc00127d2033d8&mode=admin" alt="FairArena Logo" width="140" height="140">
 </p>
 
 ---
@@ -79,7 +79,7 @@ icon: Rocket
 
 ## Deployment
 
-1) `pnpm build` to create the production bundle. 2) `pnpm start` to serve it (Next.js server mode). Suitable for Vercel or any Node 18+ host.
+1. `pnpm build` to create the production bundle. 2) `pnpm start` to serve it (Next.js server mode). Suitable for Vercel or any Node 18+ host.
 
 ## Troubleshooting
 
@@ -96,9 +96,9 @@ This project is licensed under the **Proprietary License** — see [LICENSE](LIC
 ---
 
 <p align="center">
-  <a href="https://fair.sakshamg.me">🌐 Website</a> •
+  <a href="https://fairarena.app">🌐 Website</a> •
   <a href="https://github.com/FairArena/FairArena">💻 GitHub</a> •
-  <a href="mailto:fairarena.contact@gmail.com">📧 Support</a>
+  <a href="mailto:support@fairarena.app">📧 Support</a>
 </p>
 
 <p align="center">
