@@ -1,5 +1,5 @@
 import { getPageImage, source } from "@/lib/source";
-import Image from "next/image";
+
 import { notFound } from "next/navigation";
 import { ImageResponse } from "next/og";
 
@@ -42,7 +42,7 @@ export async function GET(
       />
 
       {/* Logo */}
-      <Image
+      <img
         src="https://fra.cloud.appwrite.io/v1/storage/buckets/697b974d001a7a80496e/files/697b9764002453409e98/view?project=69735edc00127d2033d8&mode=admin"
         alt="Fairarena Logo"
         width="100"
