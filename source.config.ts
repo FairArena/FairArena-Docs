@@ -20,8 +20,11 @@ export const docs = defineDocs({
   },
 });
 
+import lastModified from 'fumadocs-mdx/plugins/last-modified';
+
 export default defineConfig({
   mdxOptions: {
     // MDX options
   },
+  plugins: [lastModified()],
 });
